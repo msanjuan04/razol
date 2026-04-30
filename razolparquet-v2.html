@@ -1,0 +1,1700 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZDZWK6E03"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4ZDZWK6E03');</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- SEO -->
+<meta name="description" content="Especialistas en instalación, lijado y restauración de parquet en Barcelona. Más de 25 años de experiencia, presupuesto sin sorpresas.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://razolparquet.com/">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://razolparquet.com/">
+<meta property="og:title" content="Razolparquet — Instalación y Restauración de Parquet en Barcelona">
+<meta property="og:description" content="Especialistas en instalación, lijado y restauración de parquet en Barcelona. Más de 25 años de experiencia, presupuesto sin sorpresas.">
+<meta property="og:image" content="https://razolparquet.com/assets/og-home.jpg">
+<meta property="og:locale" content="es_ES">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Razolparquet — Parquet en Barcelona">
+<meta name="twitter:description" content="Especialistas en instalación y restauración de parquet en Barcelona. +25 años de experiencia.">
+<meta name="twitter:image" content="https://razolparquet.com/assets/og-home.jpg">
+<!-- Schema.org LocalBusiness -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Razol Parquet",
+  "description": "Especialistas en instalación, lijado y restauración de parquet en Barcelona y área metropolitana.",
+  "url": "https://razolparquet.com",
+  "telephone": "+34603014636",
+  "email": "hola@razolparquet.com",
+  "openingHours": ["Mo-Fr 09:00-18:00"],
+  "image": "https://razolparquet.com/assets/og-home.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Calle Lima, 1, Nave I",
+    "addressLocality": "Barcelona",
+    "postalCode": "08030",
+    "addressRegion": "Cataluña",
+    "addressCountry": "ES"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "41.4114",
+    "longitude": "2.1906"
+  },
+  "priceRange": "€€",
+  "areaServed": ["Barcelona", "Hospitalet de Llobregat", "Sant Cugat del Vallès", "Badalona", "Terrassa", "Sabadell", "Castelldefels", "Sitges", "Mataró", "Gavà", "Esplugues de Llobregat"],
+  "serviceType": ["Instalación de parquet", "Lijado de parquet", "Restauración de parquet", "Tarima exterior"],
+  "foundingDate": "2000",
+  "sameAs": [],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "52",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+}
+</script>
+<title>Instalación y Restauración de Parquet en Barcelona | Razolparquet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="/assets/home1.webp" fetchpriority="high">
+<style>
+  :root {
+    --cream: #F5F0E8;
+    --dark: #19150F;
+    --brown: #6B4C30;
+    --gold: #C8A96E;
+    --gold-light: #D4BA85;
+    --warm-gray: #8C7B6B;
+    --light-wood: #D4B896;
+    --surface: rgba(255,255,255,0.03);
+    --border: rgba(245,240,232,0.07);
+  }
+
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior: smooth; }
+
+  html { overflow-x: hidden; }
+body {
+    background: var(--dark);
+    color: var(--cream);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+  }
+
+  /* GRAIN */
+  body::after {
+    content:'';
+    position:fixed;
+    inset:0;
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+    pointer-events:none;
+    z-index:9998;
+    opacity:.5;
+  }
+
+  /* ── SCROLL PROGRESS ── */
+  #scroll-progress {
+    position: fixed;
+    top: 0; left: 0;
+    height: 2px;
+    width: 0%;
+    background: var(--gold);
+    z-index: 9999;
+    transition: width .08s linear;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position:fixed; top:0; left:0; right:0; z-index:8000;
+    padding:24px 64px;
+    display:flex; justify-content:space-between; align-items:center;
+    background: linear-gradient(to bottom, rgba(25,21,15,0.98) 0%, rgba(25,21,15,0) 100%);
+    transition: background .4s;
+  }
+  nav.scrolled { background: rgba(25,21,15,0.97); backdrop-filter:blur(20px); }
+
+  .logo {
+    font-family:'Cormorant Garamond', serif;
+    font-size:20px; font-weight:400;
+    letter-spacing:.18em; text-transform:uppercase;
+    color:var(--cream); text-decoration:none;
+  }
+  .logo span { color:var(--gold); }
+
+  .nav-links { display:flex; gap:40px; align-items:center; list-style:none; }
+  .nav-links a {
+    color:var(--cream); text-decoration:none;
+    font-size:12px; letter-spacing:.12em; text-transform:uppercase;
+    opacity:.6; transition:opacity .3s;
+  }
+  .nav-links a:hover { opacity:1; }
+  .nav-cta {
+    background:var(--gold) !important; color:var(--dark) !important;
+    padding:11px 26px; opacity:1 !important; font-weight:500 !important;
+    transition:background .3s, transform .3s !important;
+  }
+  .nav-cta:hover { background:var(--gold-light) !important; transform:translateY(-1px) !important; }
+
+  .nav-right{
+    display:flex; align-items:center; gap:18px;
+  }
+  .nav-contacto-mobile { display: none; }
+  .nav-contact-square{
+    min-height:44px;
+    padding:0 22px;
+    background:var(--gold);
+    color:var(--dark);
+    display:inline-flex; align-items:center; justify-content:center;
+    text-decoration:none;
+    font-size:10.5px;
+    font-weight:600;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    line-height:1.1;
+    white-space:nowrap;
+    box-sizing:border-box;
+    transition:background .3s, transform .3s;
+  }
+  .nav-contact-square:hover{
+    background:var(--gold-light);
+    transform:translateY(-1px);
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height:100vh; display:grid;
+    grid-template-columns:1fr 1fr;
+    position:relative; overflow:hidden;
+  }
+
+  /* Left */
+  .hero-left {
+    display:flex; flex-direction:column;
+    justify-content:flex-end;
+    padding:140px 64px 100px;
+    position:relative; z-index:2;
+  }
+
+  .hero-eyebrow {
+    display:flex; align-items:center; gap:14px;
+    margin-bottom:36px;
+    opacity:0; animation:fadeUp .8s ease .2s forwards;
+  }
+  .hero-eyebrow-line { width:32px; height:1px; background:var(--gold); }
+  .hero-eyebrow span {
+    font-size:10.5px; letter-spacing:.3em;
+    text-transform:uppercase; color:var(--gold);
+  }
+
+  .hero-title {
+    font-family:'Cormorant Garamond', serif;
+    font-size:clamp(54px,5.5vw,90px);
+    font-weight:300; line-height:.97;
+    margin-bottom:36px;
+    opacity:0; animation:fadeUp .8s ease .35s forwards;
+  }
+  .hero-title em { font-style:italic; color:var(--gold); }
+
+  .hero-sub {
+    font-size:15px; line-height:1.8;
+    color:var(--warm-gray); max-width:420px;
+    margin-bottom:56px;
+    opacity:0; animation:fadeUp .8s ease .5s forwards;
+  }
+
+  .hero-actions {
+    display:flex; gap:18px; align-items:center; flex-wrap:wrap;
+    opacity:0; animation:fadeUp .8s ease .65s forwards;
+  }
+
+  .btn-gold {
+    background:var(--gold); color:var(--dark);
+    padding:17px 42px; font-size:12.5px; font-weight:500;
+    letter-spacing:.1em; text-transform:uppercase;
+    text-decoration:none; transition:all .3s; display:inline-block;
+  }
+  .btn-gold:hover { background:var(--gold-light); transform:translateY(-2px); }
+
+  .btn-ghost {
+    color:var(--cream); font-size:12.5px; letter-spacing:.1em;
+    text-transform:uppercase; text-decoration:none;
+    opacity:.55; display:flex; align-items:center; gap:10px;
+    transition:opacity .3s;
+  }
+  .btn-ghost::after { content:'→'; transition:transform .3s; }
+  .btn-ghost:hover { opacity:1; }
+  .btn-ghost:hover::after { transform:translateX(5px); }
+
+  /* Right — carrusel de imágenes hero */
+  .hero-right {
+    position:relative; overflow:hidden;
+    opacity:0; animation:fadeIn 1.4s ease .2s forwards;
+  }
+  .hero-slider {
+    position:absolute;
+    inset:0;
+    z-index:1;
+  }
+  .hero-slide {
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:0;
+    transition:opacity 1s ease-in-out;
+  }
+  .hero-slide.is-active {
+    opacity:1;
+  }
+  .hero-right::after {
+    content:''; position:absolute; inset:0; z-index:2;
+    background:linear-gradient(to right, rgba(25,21,15,.75) 0%, rgba(25,21,15,.15) 55%, transparent 100%);
+  }
+
+  /* Badge "visita gratuita" */
+  .hero-badge {
+    position:absolute; bottom:72px; right:56px; z-index:10;
+    opacity:0; animation:fadeIn 1s ease 1.1s forwards;
+  }
+  .badge-ring {
+    width:116px; height:116px; border-radius:50%;
+    border:1px solid rgba(200,169,110,.35);
+    display:flex; flex-direction:column;
+    justify-content:center; align-items:center;
+    background:rgba(25,21,15,.65);
+    backdrop-filter:blur(12px);
+  }
+  .badge-big {
+    font-family:'Cormorant Garamond', serif;
+    font-size:38px; font-weight:300; color:var(--gold); line-height:1;
+  }
+  .badge-small {
+    font-size:8.5px; letter-spacing:.2em;
+    text-transform:uppercase; color:var(--warm-gray);
+    text-align:center; margin-top:4px;
+  }
+
+  /* Scroll indicator */
+  .hero-scroll {
+    position:absolute; bottom:36px; left:64px; z-index:10;
+    display:flex; align-items:center; gap:14px;
+    font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:var(--warm-gray);
+    opacity:0; animation:fadeIn 1s ease 1.3s forwards;
+  }
+  .scroll-bar { width:36px; height:1px; background:var(--warm-gray); animation:barPulse 2.2s ease infinite; }
+  @keyframes barPulse { 0%,100%{width:36px;opacity:.4} 50%{width:56px;opacity:.9} }
+
+  /* ── TRUST BAR ── */
+  .trust-bar {
+    background:var(--brown);
+    padding:0 64px;
+    display:grid; grid-template-columns:repeat(4,1fr);
+  }
+  .trust-item {
+    padding:40px 20px; text-align:center;
+    border-right:1px solid rgba(245,240,232,.13);
+    transition:background .3s;
+  }
+  .trust-item:last-child { border-right:none; }
+  .trust-item:hover { background:rgba(255,255,255,.05); }
+  .trust-num {
+    font-family:'Cormorant Garamond', serif;
+    font-size:50px; font-weight:300; color:var(--cream); line-height:1;
+  }
+  .trust-label {
+    font-size:10.5px; letter-spacing:.2em; text-transform:uppercase;
+    color:rgba(245,240,232,.5); margin-top:8px;
+  }
+
+  /* ── SECCIÓN genérica ── */
+  .section { padding:120px 64px; }
+  .section-sm { padding:80px 64px; }
+
+  .tag {
+    display:inline-flex; align-items:center; gap:12px;
+    font-size:10.5px; letter-spacing:.28em;
+    text-transform:uppercase; color:var(--gold); margin-bottom:22px;
+  }
+  .tag::before { content:''; width:24px; height:1px; background:var(--gold); }
+
+  .h2 {
+    font-family:'Cormorant Garamond', serif;
+    font-size:clamp(38px,4vw,58px); font-weight:300; line-height:1.05;
+    margin-bottom:22px;
+  }
+  .h2 em { font-style:italic; color:var(--gold); }
+
+  .lead {
+    font-size:15px; line-height:1.8;
+    color:var(--warm-gray); max-width:500px; margin-bottom:56px;
+  }
+
+  /* ── ANTES / DESPUÉS ── */
+  .ba-section {
+    padding:80px 64px 0;
+  }
+  .ba-header {
+    display:flex; justify-content:space-between; align-items:flex-end; gap:24px; margin-bottom:32px;
+  }
+  .ba-title {
+    font-family:'Cormorant Garamond', serif;
+    font-size:32px; font-weight:300;
+  }
+  .ba-title em { font-style:italic; color:var(--gold); }
+  .ba-sub {
+    font-size:13px; line-height:1.7; color:var(--warm-gray); max-width:420px;
+  }
+  .ba-grid {
+    display:grid; grid-template-columns:1fr 1fr; gap:24px;
+  }
+  .ba-card {
+    background:var(--surface); border:1px solid var(--border);
+    padding:20px 20px 28px;
+  }
+  .ba-label {
+    font-size:12px; letter-spacing:.18em; text-transform:uppercase;
+    color:var(--warm-gray); margin-bottom:12px;
+  }
+  .ba-slider {
+    position:relative; width:100%; aspect-ratio:4/3; overflow:hidden;
+    cursor:ew-resize; background:#1e1711;
+  }
+  .ba-img {
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    object-fit:cover; display:block;
+  }
+  .ba-img.ba-before { z-index:1; }
+  .ba-img.ba-after {
+    z-index:2;
+    clip-path:inset(0 0 0 50%);
+  }
+  .ba-handle {
+    position:absolute; top:0; bottom:0;
+    left:50%; width:0;
+    display:flex; align-items:center; justify-content:center;
+    pointer-events:none;
+  }
+  .ba-handle-line {
+    position:absolute; top:0; bottom:0;
+    width:2px; background:rgba(245,240,232,.8);
+  }
+  .ba-handle-knob {
+    position:relative; z-index:2;
+    width:26px; height:26px; border-radius:50%;
+    border:1px solid rgba(0,0,0,.7);
+    background:rgba(245,240,232,.95);
+    display:flex; align-items:center; justify-content:center;
+    font-size:14px; color:var(--dark);
+  }
+  .ba-handle-knob::before,
+  .ba-handle-knob::after {
+    content:''; width:6px; height:1px; background:var(--dark);
+  }
+  .ba-handle-knob::before { margin-right:2px; }
+  .ba-handle-knob::after { margin-left:2px; }
+
+  /* ── SERVICIOS ── */
+  .services-grid {
+    display:grid; grid-template-columns:repeat(2,1fr); gap:2px;
+  }
+  .srv {
+    background:var(--surface); border:1px solid var(--border);
+    padding:48px 40px;
+    position:relative; overflow:hidden;
+    transition:all .4s; cursor:default;
+  }
+  .srv::after {
+    content:''; position:absolute; bottom:0; left:0; right:0;
+    height:2px; background:var(--gold);
+    transform:scaleX(0); transform-origin:left;
+    transition:transform .4s;
+  }
+  .srv:hover { background:rgba(200,169,110,.06); border-color:rgba(200,169,110,.2); transform:translateY(-3px); }
+  .srv:hover::after { transform:scaleX(1); }
+  .srv-num {
+    font-family:'Cormorant Garamond', serif;
+    font-size:13px; color:var(--gold); letter-spacing:.2em; display:block; margin-bottom:18px;
+  }
+  .srv-name {
+    font-family:'Cormorant Garamond', serif;
+    font-size:26px; font-weight:400; margin-bottom:14px; line-height:1.15;
+  }
+  .srv-desc { font-size:13.5px; line-height:1.75; color:var(--warm-gray); }
+
+  /* ── PROCESO ── */
+  .proceso-wrap {
+    background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);
+    padding:120px 64px;
+  }
+  .proceso-grid {
+    display:grid; grid-template-columns:repeat(5,1fr); gap:28px;
+    margin-top:72px; position:relative;
+  }
+  .proceso-grid::before {
+    content:''; position:absolute; top:30px; left:48px; right:48px;
+    height:1px; background:linear-gradient(to right, var(--gold), transparent);
+    opacity:.25;
+  }
+  .step-num {
+    width:60px; height:60px; border:1px solid rgba(200,169,110,.3);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Cormorant Garamond', serif; font-size:20px; color:var(--gold);
+    background:var(--dark); position:relative; z-index:1; margin-bottom:28px;
+  }
+  .step-name {
+    font-family:'Cormorant Garamond', serif;
+    font-size:22px; font-weight:400; margin-bottom:12px;
+  }
+  .step-desc { font-size:13px; line-height:1.75; color:var(--warm-gray); }
+
+  /* ── PROYECTOS (inspirado en Winco: storytelling + grid editorial) ── */
+  .proyectos-header {
+    display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:52px;
+  }
+  .proyectos-grid {
+    display:grid;
+    grid-template-columns:1.7fr 1fr 1.1fr;
+    grid-template-rows:460px 400px;
+    gap:4px;
+  }
+  .proy {
+    position:relative; overflow:hidden; cursor:pointer;
+    background:#231811;
+  }
+  .proy:first-child { grid-row:1/3; }
+  .proy:nth-child(4) { grid-column:2/4; }
+  .proy:nth-child(5) { display:none; }
+
+  .proy-bg {
+    position:absolute; inset:0;
+    transition:transform .7s cubic-bezier(.25,.46,.45,.94);
+  }
+  .proy:hover .proy-bg { transform:scale(1.05); }
+
+  /* Texturas madera simuladas */
+  .w1 .proy-bg { background:repeating-linear-gradient(170deg,transparent,transparent 7px,rgba(120,80,30,.07) 7px,rgba(120,80,30,.07) 8px),linear-gradient(145deg,#4A3020 0%,#6B4530 28%,#8A6040 52%,#5C3C25 72%,#7A5535 100%); }
+  .w2 .proy-bg { background:repeating-linear-gradient(165deg,transparent,transparent 11px,rgba(55,38,15,.09) 11px,rgba(55,38,15,.09) 12px),linear-gradient(120deg,#2A1A0A 0%,#5C3D22 38%,#3D2810 68%,#6B4A28 100%); }
+  .w3 .proy-bg { background:repeating-linear-gradient(175deg,transparent,transparent 6px,rgba(140,100,50,.06) 6px,rgba(140,100,50,.06) 7px),linear-gradient(160deg,#5A3A20 0%,#7A5535 33%,#4A2E18 58%,#8A6840 88%); }
+  .w4 .proy-bg { background:repeating-linear-gradient(162deg,transparent,transparent 9px,rgba(90,60,25,.08) 9px,rgba(90,60,25,.08) 10px),linear-gradient(130deg,#3A2510 0%,#604028 38%,#482E18 63%,#7A5530 100%); }
+  .w5 .proy-bg { background:repeating-linear-gradient(178deg,transparent,transparent 8px,rgba(110,75,35,.07) 8px,rgba(110,75,35,.07) 9px),linear-gradient(150deg,#5C4028 0%,#2A1810 28%,#7A5838 58%,#4A3220 88%); }
+
+  .proy-overlay {
+    position:absolute; inset:0; z-index:2;
+    background:linear-gradient(to top, rgba(25,21,15,.88) 0%, transparent 60%);
+    display:flex; flex-direction:column; justify-content:flex-end;
+    padding:32px; opacity:0; transition:opacity .4s;
+  }
+  .proy:hover .proy-overlay { opacity:1; }
+  .proy-tag { font-size:10px; letter-spacing:.25em; text-transform:uppercase; color:var(--gold); margin-bottom:8px; }
+  .proy-title { font-family:'Cormorant Garamond', serif; font-size:22px; line-height:1.2; }
+
+  /* Etiqueta siempre visible (tipo Winco) */
+  .proy-label {
+    position:absolute; top:24px; left:24px; z-index:3;
+    background:rgba(25,21,15,.7); backdrop-filter:blur(8px);
+    padding:7px 14px;
+    font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--cream);
+    opacity:1; border:1px solid rgba(245,240,232,.12);
+  }
+
+  /* ── RAZÓN: sección diferencial (lo que Winco no tiene visible) ── */
+  .razon-section {
+    padding:120px 64px;
+    display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;
+  }
+  .razon-list { margin-top:40px; display:flex; flex-direction:column; gap:0; }
+  .razon-item {
+    display:flex; align-items:flex-start; gap:24px;
+    padding:28px 0; border-bottom:1px solid var(--border);
+    transition:all .3s;
+  }
+  .razon-item:first-child { border-top:1px solid var(--border); }
+  .razon-item:hover { padding-left:8px; }
+  .razon-icon {
+    width:44px; height:44px; border:1px solid rgba(200,169,110,.3);
+    display:flex; align-items:center; justify-content:center;
+    font-size:18px; flex-shrink:0; color:var(--gold);
+  }
+  .razon-title { font-size:16px; font-weight:500; margin-bottom:6px; }
+  .razon-desc { font-size:13px; line-height:1.7; color:var(--warm-gray); }
+
+  /* Mapa visual (caja simulada) */
+  .razon-visual {
+    position:relative; background:rgba(107,76,48,.12);
+    border:1px solid var(--border); padding:48px;
+    display:flex; flex-direction:column; gap:24px;
+  }
+  .razon-visual-tag {
+    font-size:10px; letter-spacing:.25em; text-transform:uppercase; color:var(--gold);
+  }
+  .razon-visual h3 {
+    font-family:'Cormorant Garamond', serif;
+    font-size:36px; font-weight:300; line-height:1.1;
+  }
+  .razon-visual h3 em { font-style:italic; color:var(--gold); }
+  .razon-visual p { font-size:14px; line-height:1.8; color:var(--warm-gray); }
+  .garantia-badge {
+    display:inline-flex; align-items:center; gap:12px;
+    padding:14px 20px; background:rgba(200,169,110,.1);
+    border:1px solid rgba(200,169,110,.25); margin-top:8px;
+  }
+  .garantia-badge span:first-child {
+    font-family:'Cormorant Garamond', serif;
+    font-size:32px; color:var(--gold);
+  }
+  .garantia-badge div small {
+    display:block; font-size:10px; letter-spacing:.18em;
+    text-transform:uppercase; color:var(--warm-gray);
+  }
+  .garantia-badge div strong { font-size:14px; font-weight:400; }
+
+  /* Cifras destacadas */
+  .cifras-grid {
+    display:grid; grid-template-columns:1fr 1fr; gap:2px;
+    height:100%;
+  }
+  .cifra-item {
+    display:flex; flex-direction:column; justify-content:center;
+    padding:36px 32px;
+    border:1px solid var(--border);
+    background:rgba(255,255,255,0.02);
+    transition:background .3s;
+  }
+  .cifra-item:hover { background:rgba(200,169,110,.06); }
+  .cifra-num {
+    font-family:'Cormorant Garamond', serif;
+    font-size:52px; font-weight:300; line-height:1;
+    color:var(--gold); margin-bottom:12px;
+    letter-spacing:-.01em;
+  }
+  .cifra-label {
+    font-size:12px; line-height:1.6;
+    color:var(--warm-gray); letter-spacing:.02em;
+  }
+
+  /* ── TESTIMONIOS ── */
+  .testi-section {
+    padding:120px 64px;
+    background:linear-gradient(135deg, rgba(107,76,48,.07) 0%, transparent 60%);
+    border-top:1px solid var(--border);
+  }
+  /* Carrusel de testimonios */
+  .testi-carousel { position:relative; margin-top:56px; }
+  .testi-grid {
+    display:grid; grid-template-columns:repeat(3,1fr); gap:24px;
+    opacity:1; transition:opacity .45s ease;
+  }
+  .testi-grid.fading { opacity:0; }
+  .testi-dots { display:flex; justify-content:center; gap:10px; margin-top:36px; }
+  .testi-dot {
+    width:7px; height:7px; border-radius:50%;
+    background:var(--border); cursor:pointer;
+    transition:background .3s, transform .3s; border:none; padding:0;
+  }
+  .testi-dot.active { background:var(--gold); transform:scale(1.3); }
+  .testi {
+    padding:40px; border:1px solid var(--border);
+    background:var(--surface); position:relative; transition:border-color .3s;
+  }
+  .testi:hover { border-color:rgba(200,169,110,.2); }
+  .testi::before {
+    content:'"'; font-family:'Cormorant Garamond', serif;
+    font-size:84px; color:var(--gold); opacity:.22;
+    position:absolute; top:18px; left:30px; line-height:1;
+  }
+  .testi-stars { color:var(--gold); font-size:12px; letter-spacing:2px; margin-bottom:18px; }
+  .testi-text {
+    font-family:'Cormorant Garamond', serif;
+    font-size:17px; font-style:italic; line-height:1.65;
+    color:var(--cream); margin-bottom:28px; margin-top:16px;
+  }
+  .testi-author { display:flex; align-items:center; gap:14px; }
+  .testi-avatar {
+    width:46px; height:46px; border-radius:50%;
+    background:var(--brown); display:flex; align-items:center; justify-content:center;
+    font-family:'Cormorant Garamond', serif; font-size:18px; color:var(--gold); flex-shrink:0;
+  }
+  .testi-name { font-size:14px; font-weight:400; }
+  .testi-place { font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--warm-gray); margin-top:3px; }
+
+  /* Google rating row */
+  .google-bar {
+    margin-top:48px; padding:28px 40px;
+    background:rgba(255,255,255,.03); border:1px solid var(--border);
+    display:flex; align-items:center; justify-content:center; gap:32px; flex-wrap:wrap;
+  }
+  .g-logo { font-size:28px; }
+  .g-score {
+    font-family:'Cormorant Garamond', serif;
+    font-size:48px; font-weight:300; color:var(--cream); line-height:1;
+  }
+  .g-info small {
+    display:block; font-size:11px; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--warm-gray); margin-top:4px;
+  }
+  .g-stars { font-size:20px; color:#FBBC04; letter-spacing:3px; }
+  .g-review-btn {
+    display:inline-block; padding:11px 24px;
+    border:1px solid rgba(200,169,110,.45); color:var(--gold);
+    font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+    text-decoration:none; transition:background .3s, color .3s;
+    white-space:nowrap;
+  }
+  .g-review-btn:hover { background:var(--gold); color:var(--dark); }
+
+  /* ── CTA FINAL ── */
+  .cta-section {
+    background:var(--brown); padding:110px 64px;
+    text-align:center; position:relative; overflow:hidden;
+  }
+  .cta-section::before {
+    content:''; position:absolute; inset:0;
+    background:repeating-linear-gradient(170deg,transparent,transparent 14px,rgba(245,240,232,.025) 14px,rgba(245,240,232,.025) 15px);
+  }
+  .cta-section > * { position:relative; z-index:1; }
+  .cta-tag { font-size:10.5px; letter-spacing:.3em; text-transform:uppercase; color:rgba(245,240,232,.45); display:block; margin-bottom:20px; }
+  .cta-title {
+    font-family:'Cormorant Garamond', serif;
+    font-size:clamp(44px,5.5vw,76px); font-weight:300; line-height:1.05;
+    color:var(--cream); margin-bottom:22px;
+  }
+  .cta-title em { font-style:italic; }
+  .cta-desc { font-size:15px; color:rgba(245,240,232,.58); max-width:460px; margin:0 auto 48px; line-height:1.75; }
+  .cta-row { display:flex; gap:18px; justify-content:center; flex-wrap:wrap; }
+  .btn-cream {
+    background:var(--cream); color:var(--dark);
+    padding:18px 46px; font-size:12.5px; font-weight:500;
+    letter-spacing:.1em; text-transform:uppercase;
+    text-decoration:none; transition:all .3s; display:inline-block;
+  }
+  .btn-cream:hover { background:var(--gold); transform:translateY(-2px); }
+  .btn-outline {
+    border:1px solid rgba(245,240,232,.35); color:var(--cream);
+    padding:17px 40px; font-size:12.5px; letter-spacing:.1em;
+    text-transform:uppercase; text-decoration:none;
+    transition:all .3s; display:inline-block;
+  }
+  .btn-outline:hover { border-color:var(--cream); background:rgba(245,240,232,.07); }
+
+  /* ── CONTACTO ── */
+  .contacto {
+    padding:100px 64px;
+    display:grid; grid-template-columns:1fr 1fr; gap:80px;
+    border-top:1px solid var(--border);
+  }
+  .contacto-left h3 {
+    font-family:'Cormorant Garamond', serif;
+    font-size:42px; font-weight:300; line-height:1.15; margin-bottom:22px;
+  }
+  .contacto-left h3 em { font-style:italic; color:var(--gold); }
+  .contacto-left p { font-size:14px; line-height:1.8; color:var(--warm-gray); margin-bottom:40px; }
+
+  .c-links { display:flex; flex-direction:column; gap:18px; }
+  .c-link {
+    display:flex; align-items:center; gap:16px;
+    text-decoration:none; color:var(--cream);
+    font-size:14px; transition:color .3s;
+  }
+  .c-link:hover { color:var(--gold); }
+  .c-icon {
+    width:42px; height:42px; border:1px solid var(--border);
+    display:flex; align-items:center; justify-content:center;
+    font-size:16px; flex-shrink:0; transition:border-color .3s; color:var(--gold);
+  }
+  .c-link:hover .c-icon { border-color:rgba(200,169,110,.3); }
+
+  /* Formulario */
+  .form-row { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .fg { margin-bottom:16px; }
+  .fg label {
+    display:block; font-size:10.5px; letter-spacing:.18em;
+    text-transform:uppercase; color:var(--warm-gray); margin-bottom:7px;
+  }
+  .fg input, .fg select, .fg textarea {
+    width:100%; background:rgba(255,255,255,.045);
+    border:1px solid var(--border);
+    padding:13px 16px; color:var(--cream);
+    font-family:'DM Sans', sans-serif; font-size:13.5px;
+    outline:none; transition:border-color .3s; -webkit-appearance:none;
+  }
+  .fg input:focus, .fg select:focus, .fg textarea:focus { border-color:var(--gold); }
+  .fg select option { background:#2A2018; }
+  .fg textarea { resize:vertical; min-height:96px; }
+  .form-submit {
+    width:100%; background:var(--gold); color:var(--dark);
+    border:none; padding:17px;
+    font-family:'DM Sans', sans-serif; font-size:12.5px; font-weight:500;
+    letter-spacing:.1em; text-transform:uppercase;
+    cursor:pointer; transition:all .3s; margin-top:4px;
+  }
+  .form-submit:hover { background:var(--gold-light); transform:translateY(-2px); }
+  .form-note { font-size:11.5px; color:var(--warm-gray); text-align:center; margin-top:14px; }
+
+  /* ── FOOTER ── */
+  footer {
+    padding:40px 64px;
+    border-top:1px solid var(--border);
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px;
+  }
+  footer p { font-size:12px; color:var(--warm-gray); }
+  .foot-links { display:flex; gap:28px; }
+  .foot-links a {
+    font-size:12px; color:var(--warm-gray);
+    text-decoration:none; transition:color .3s;
+  }
+  .foot-links a:hover { color:var(--cream); }
+
+  /* ── WHATSAPP ── */
+  .wa {
+    position:fixed; bottom:32px; right:32px; z-index:999;
+    width:58px; height:58px; border-radius:50%;
+    background:#25D366; display:flex; align-items:center; justify-content:center;
+    text-decoration:none; box-shadow:0 6px 28px rgba(37,211,102,.38);
+    animation:waPulse 3s ease infinite; transition:transform .3s;
+  }
+  .wa:hover { transform:scale(1.1); }
+  @keyframes waPulse {
+    0%,100%{box-shadow:0 6px 28px rgba(37,211,102,.38)}
+    50%{box-shadow:0 6px 44px rgba(37,211,102,.6)}
+  }
+
+  /* ── KEYFRAMES ── */
+  @keyframes fadeUp { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:translateY(0)} }
+  @keyframes fadeIn { from{opacity:0} to{opacity:1} }
+
+  /* ── BLOG SECTION RESPONSIVE ── */
+  @media(max-width:900px){
+    .blog-home-grid { grid-template-columns:1fr !important; }
+    .blog-home-section { padding:60px 20px !important; }
+  }
+
+  /* ── RESPONSIVE ── */
+  @media(max-width:900px){
+    .hero { grid-template-columns:1fr; min-height:100svh; background-image:url('/assets/home1.webp'); background-size:cover; background-position:center; }
+    .hero::before { content:''; position:absolute; inset:0; background:rgba(25,21,15,0.72); }
+    .hero-right { display:none; }
+    .hero-left { padding: 100px 20px 60px; position:relative; }
+    .hero-title { font-size: clamp(32px, 8vw, 52px); }
+    .hero-sub { font-size: 14px; }
+    .trust-bar { grid-template-columns:1fr 1fr; padding:0 20px; }
+    .trust-item { border:none; padding:32px 16px; }
+    .section { padding: 60px 20px; }
+    .h2 { font-size: clamp(28px, 6vw, 40px); }
+    .services-grid { grid-template-columns:1fr; }
+    .services-grid .srv:last-child { grid-column: span 1; }
+    .srv { padding: 32px 24px; }
+    .proceso-wrap { padding: 60px 20px; }
+    .proceso-grid { grid-template-columns:1fr; gap: 32px; }
+    .proyectos-grid { grid-template-columns:1fr; grid-template-rows:none !important; gap:4px; }
+    .proyectos-grid .proy { grid-column:auto !important; grid-row:auto !important; height:260px; }
+    .razon-section { grid-template-columns:1fr; padding: 60px 20px; gap: 40px; }
+    .cifras-grid { grid-template-columns:1fr 1fr; }
+    .testi-section { padding: 60px 20px; }
+    .testi-grid { grid-template-columns:1fr; gap: 16px; }
+    .cta-section { padding: 60px 20px; }
+    .cta-strip { flex-direction: column; padding: 48px 20px; text-align: center; }
+    .cta-btns { flex-direction: column; align-items: center; }
+    .contacto { grid-template-columns:1fr; padding: 60px 20px; gap:48px; }
+    footer { flex-direction:column; gap: 16px; text-align:center; padding: 40px 20px; }
+    .foot-links { flex-wrap: wrap; justify-content: center; }
+    .proyectos-header { flex-direction:column; align-items:flex-start; gap:20px; }
+    .ba-section { padding: 60px 20px 0; }
+    .ba-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+    .ba-sub { max-width: 100%; }
+    .ba-grid { grid-template-columns: 1fr; }
+    .ba-slider { aspect-ratio: 3/2; cursor: default; }
+    .ba-handle { display: none; }
+    .ba-img.ba-after {
+      clip-path: none;
+      -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 65%);
+      mask-image: linear-gradient(to right, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 65%);
+    }
+    .ba-slider::before,
+    .ba-slider::after {
+      content: '';
+      position: absolute;
+      z-index: 10;
+      bottom: 14px;
+      font-size: 9px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      background: rgba(25,21,15,.72);
+      padding: 5px 10px;
+      color: var(--gold);
+      pointer-events: none;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .ba-slider::before { content: 'ANTES';   left: 14px; }
+    .ba-slider::after  { content: 'DESPUÉS'; right: 14px; }
+  }
+
+  @media(max-width:600px){
+    .hero-title { font-size: clamp(28px, 9vw, 40px); }
+    .cifras-grid { grid-template-columns:1fr 1fr; gap: 16px; }
+    .btn-gold, .btn-ghost, .btn-cream { width: 100%; text-align: center; justify-content: center; }
+    .hero-actions { flex-direction: column; gap: 12px; }
+    .step-actions { flex-direction: column-reverse; gap: 10px; }
+    .step-next, .step-prev { width: 100%; text-align: center; }
+  }
+
+/* NAV DROPDOWN */
+.nav-item-drop{position:relative;}
+.nav-item-drop>a::after{content:'';display:inline-block;width:4px;height:4px;border-right:1px solid currentColor;border-bottom:1px solid currentColor;transform:rotate(45deg);margin-left:6px;opacity:.5;vertical-align:middle;position:relative;top:-2px;}
+.nav-dropdown{position:absolute;top:calc(100% + 22px);left:50%;transform:translateX(-50%);background:rgba(25,21,15,.97);backdrop-filter:blur(20px);border:1px solid rgba(245,240,232,.08);min-width:130px;padding:8px 0;opacity:0;pointer-events:none;transition:opacity .2s;white-space:nowrap;z-index:300;}
+.nav-item-drop:hover .nav-dropdown{opacity:1;pointer-events:auto;}
+.nav-dropdown a{display:block;padding:11px 22px;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,240,232,.55)!important;text-decoration:none;transition:color .2s;opacity:1!important;}
+.nav-dropdown a:hover{color:#C8A96E!important;}
+
+/* ── HAMBURGUESA ── */
+.nav-burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 310;
+}
+.nav-burger span {
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  background: var(--cream);
+  transition: all .3s;
+}
+.nav-burger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-burger.open span:nth-child(2) { opacity: 0; }
+.nav-burger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* ── MENÚ MÓVIL ── */
+@media (max-width: 768px) {
+  nav { background: rgba(25,21,15,0.97) !important; padding: 18px 20px; }
+  .nav-contact-square { display: none !important; }
+  .nav-contacto-mobile { display: list-item; }
+.nav-burger {
+    display: flex;
+    position: relative;
+    z-index: 1001;
+  }
+  .nav-burger:focus,
+  .nav-burger:focus-visible { outline: none; box-shadow: none; }
+  .nav-links {
+    display: flex !important;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: #19150F;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(20px, 4vh, 44px);
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: transform .35s cubic-bezier(.4,0,.2,1);
+    pointer-events: none;
+    list-style: none;
+    margin: 0;
+    padding: 80px 40px;
+  }
+  .nav-links.open {
+    transform: translateX(0);
+    pointer-events: auto;
+  }
+  .nav-links li { list-style: none; text-align: center; }
+  .nav-links a {
+    display: block;
+    font-size: clamp(16px, 4vw, 22px) !important;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--cream) !important;
+    text-decoration: none;
+    opacity: 1 !important;
+    font-weight: 300;
+    padding: 8px 0;
+    transition: color .2s;
+  }
+  .nav-links a:hover { color: var(--gold) !important; }
+}
+</style>
+  <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "Razol Parquet",
+    "legalName": "Forestal 4, S.L.",
+    "url": "https://razolparquet.com",
+    "logo": "https://razolparquet.com/assets/logorazol.svg",
+    "image": "https://razolparquet.com/assets/og-home.jpg",
+    "description": "Especialistas en instalación, lijado y restauración de parquet en Barcelona. Más de 25 años de experiencia. Presupuesto sin sorpresas y garantía escrita en cada proyecto.",
+    "telephone": "+34603014636",
+    "email": "hola@razolparquet.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Calle Lima, 1, Nave I",
+      "addressLocality": "Barcelona",
+      "postalCode": "08030",
+      "addressCountry": "ES"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 41.4155,
+      "longitude": 2.1944
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "bestRating": "5",
+      "ratingCount": "60"
+    },
+    "areaServed": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 41.3851,
+        "longitude": 2.1734
+      },
+      "geoRadius": "40000"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servicios de parquet",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Instalación de parquet"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Lijado y restauración de parquet"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Tarima exterior y terrazas"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Reparación de parquet"}}
+      ]
+    },
+    "sameAs": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJz-XOimO9pBIRFkjf8-iPIK0"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- SCROLL PROGRESS -->
+<div id="scroll-progress"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="/" class="logo" target="_top"><img src="/assets/logorazol.svg" alt="Razol Parquet" height="52" style="display:block;"></a>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="/" target="_top" data-i18n="nav.home">Inicio</a></li>
+      <li><a href="/servicios" target="_top">Servicios</a></li>
+      <li><a href="/proyectos" target="_top">Proyectos</a></li>
+      <li><a href="/como-trabajamos" target="_top" data-i18n="nav.howwework">Cómo trabajamos</a></li>
+      <li><a href="/blog" target="_top">Blog</a></li>
+      <li><a href="/contacto" target="_top">Tu proyecto</a></li>
+      <li class="nav-contacto-mobile"><a href="/showroom" target="_top">Contacto</a></li>
+    </ul>
+    <a href="/showroom" class="nav-contact-square" data-i18n="nav.contact" target="_top">Contacto</a>
+  </div>
+  <button class="nav-burger" id="navBurger" aria-label="Abrir menú" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="lang-sw">
+    <button class="lang-btn" data-setlang="es">ES</button>
+    <button class="lang-btn" data-setlang="en">EN</button>
+    <button class="lang-btn" data-setlang="ca">CA</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">
+      <div class="hero-eyebrow-line"></div>
+      <span data-i18n="home.hero_eyebrow">Especialistas en suelos de madera · Barcelona</span>
+    </div>
+    <h1 class="hero-title" data-i18n="home.hero_title">Parquet de alto nivel<br><em>en Barcelona.</em></h1>
+    <p class="hero-sub" data-i18n="home.hero_sub">Instalación, restauración y acabado de parquet en Barcelona. Trabajamos en Sarrià, Sant Gervasi, Eixample y zona alta para clientes que buscan un resultado impecable desde el primer día.</p>
+    <div class="hero-actions">
+      <a href="#contacto" class="btn-gold" data-i18n="home.hero_cta1">Solicitar visita gratuita</a>
+      <a href="/proyectos" class="btn-ghost" data-i18n="home.hero_cta2" target="_top">Ver nuestros trabajos</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-slider">
+      <img src="/assets/home1.webp" alt="Instalación de parquet en espiga en vivienda de Barcelona" class="hero-slide is-active" loading="eager" fetchpriority="high" decoding="async">
+      <img src="/assets/home2.webp" alt="Parquet de roble natural en piso del Eixample Barcelona" class="hero-slide" loading="lazy" fetchpriority="low" decoding="async">
+      <img src="/assets/home3.webp" alt="Restauración de parquet antiguo en vivienda de Sant Gervasi" class="hero-slide" loading="lazy" fetchpriority="low" decoding="async">
+      <img src="/assets/home4.webp" alt="Acabado liso con aceite en parquet de roble natural Barcelona" class="hero-slide" loading="lazy" fetchpriority="low" decoding="async">
+      <img src="/assets/home5.webp" alt="Detalle de tarima de madera exterior instalada en terraza Barcelona" class="hero-slide" loading="lazy" fetchpriority="low" decoding="async">
+    </div>
+    <div class="hero-badge">
+      <div class="badge-ring">
+        <div class="badge-big">25</div>
+        <div class="badge-small" data-i18n="home.badge_years">años de<br>experiencia</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-bar"></div>
+    <span data-i18n="home.scroll">Descubrir</span>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item">
+    <div class="trust-num" data-count="800" data-prefix="+">+800</div>
+    <div class="trust-label" data-i18n="home.trust_proj">Proyectos realizados</div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-num" data-count="25">25</div>
+    <div class="trust-label" data-i18n="home.trust_years">Años de experiencia</div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-num">48h</div>
+    <div class="trust-label" data-i18n="home.trust_quote">Presupuesto detallado</div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-num">4,9★</div>
+    <div class="trust-label" data-i18n="home.trust_rating">Valoración media Google</div>
+  </div>
+</div>
+
+<!-- SERVICIOS -->
+<section class="section" id="servicios">
+  <span class="tag" data-i18n="home.srv_tag">Lo que hacemos</span>
+  <h2 class="h2" data-i18n="home.srv_h2">Cada suelo,<br><em>un trabajo único</em></h2>
+  <p class="lead" data-i18n="home.srv_lead">Trabajamos con madera desde hace más de dos décadas. Ese tiempo tiene un nombre: criterio. Sabemos exactamente qué necesita tu espacio y cómo conseguirlo.</p>
+
+  <div class="services-grid">
+    <div class="srv">
+      <span class="srv-num">01</span>
+      <div class="srv-name" data-i18n="home.srv1_name">Instalación de Parquet</div>
+      <p class="srv-desc" data-i18n="home.srv1_desc">Parquet macizo, multilámina y laminado. Aparejo lama, espiga, chevron o damas. Cada elección tiene su técnica, y dominamos todas. Instalamos con precisión milimétrica.</p>
+    </div>
+    <div class="srv">
+      <span class="srv-num">02</span>
+      <div class="srv-name" data-i18n="home.srv2_name">Lijado y Restauración</div>
+      <p class="srv-desc" data-i18n="home.srv2_desc">El lijado profesional devuelve la vida a suelos deteriorados. Eliminamos años de uso, arañazos y oxidación para preparar la madera como si fuera nueva.</p>
+    </div>
+    <div class="srv">
+      <span class="srv-num">03</span>
+      <div class="srv-name" data-i18n="home.srv3_name">Tarima Exterior</div>
+      <p class="srv-desc" data-i18n="home.srv3_desc">Terrazas y jardines con madera tratada y composite de alta resistencia. Diseño cuidado y materiales que aguantan el clima mediterráneo sin perder elegancia.</p>
+    </div>
+    <div class="srv">
+      <span class="srv-num">04</span>
+      <div class="srv-name" data-i18n="home.srv4_name">Asesoría y Visita</div>
+      <p class="srv-desc" data-i18n="home.srv4_desc">Visita gratuita a tu espacio. Sin compromiso, sin prisa. Te explicamos las opciones, te mostramos muestras y te ayudamos a tomar la mejor decisión para tu hogar.</p>
+    </div>
+  </div>
+
+  <!-- CTA WhatsApp -->
+  <div style="margin-top:48px;padding:36px 40px;border:1px solid rgba(200,169,110,0.2);background:rgba(200,169,110,0.04);display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;">
+    <div>
+      <p style="margin:0 0 6px;font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:var(--cream);" data-i18n="home.wa_title">¿Quieres saber cuánto costaría en tu caso?</p>
+      <p style="margin:0;font-size:13px;color:var(--warm-gray);line-height:1.7;" data-i18n="home.wa_sub">Envíanos fotos y te damos una valoración rápida. Sin compromiso.</p>
+    </div>
+    <a href="https://wa.me/34603014636?text=Hola%2C%20quiero%20enviar%20fotos%20de%20mi%20suelo%20para%20una%20valoraci%C3%B3n%20r%C3%A1pida" target="_blank" style="display:inline-flex;align-items:center;gap:10px;background:#25D366;color:#fff;padding:14px 28px;font-family:'DM Sans',sans-serif;font-size:12.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;white-space:nowrap;flex-shrink:0;transition:background .2s;" onmouseover="this.style.background='#1ebe5a'" onmouseout="this.style.background='#25D366'">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      <span data-i18n="home.wa_btn">Enviar fotos por WhatsApp</span>
+    </a>
+  </div>
+</section>
+
+<!-- ANTES / DESPUÉS -->
+<section class="ba-section">
+  <div class="ba-header">
+    <div>
+      <span class="tag" data-i18n="home.ba_tag">Antes y después</span>
+      <h2 class="ba-title" data-i18n="home.ba_title">Así cambia un espacio<br><em>cuando el suelo es el protagonista</em></h2>
+    </div>
+    <p class="ba-sub" data-i18n="home.ba_sub">Desliza la barra en cada imagen para ver el antes y el después de dos proyectos reales. Tú subes las fotos del antes y del después, nosotros nos encargamos del resto.</p>
+  </div>
+
+  <div class="ba-grid">
+    <div class="ba-card">
+      <div class="ba-label" data-i18n="home.ba_label1">Proyecto 1</div>
+      <div class="ba-slider" data-ba>
+        <img src="/assets/ayd/despues1.webp" alt="Parquet restaurado — estado después de la restauración profesional" class="ba-img ba-before" loading="lazy">
+        <img src="/assets/ayd/antes1.webp" alt="Parquet deteriorado — estado antes de la restauración en Barcelona" class="ba-img ba-after" loading="lazy">
+        <div class="ba-handle">
+          <div class="ba-handle-line"></div>
+          <div class="ba-handle-knob"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ba-card">
+      <div class="ba-label" data-i18n="home.ba_label2">Proyecto 2</div>
+      <div class="ba-slider" data-ba>
+        <img src="/assets/ayd/despues2.webp" alt="Suelo de parquet renovado — resultado final tras la restauración profesional" class="ba-img ba-before" loading="lazy">
+        <img src="/assets/ayd/antes2.webp" alt="Suelo de parquet en mal estado — antes de la restauración Razol Parquet" class="ba-img ba-after" loading="lazy">
+        <div class="ba-handle">
+          <div class="ba-handle-line"></div>
+          <div class="ba-handle-knob"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESO -->
+<section class="proceso-wrap" id="proceso">
+  <span class="tag" data-i18n="home.proc_tag">Cómo trabajamos</span>
+  <h2 class="h2" data-i18n="home.proc_h2">Proceso claro. Precio cerrado.<br><em>Sin sorpresas.</em></h2>
+  <p style="font-size:14px;color:var(--warm-gray);margin-top:12px;line-height:1.7;" data-i18n="home.proc_sub">Así evitamos errores y retrabajos en cada obra.</p>
+  <div class="proceso-grid">
+    <div>
+      <div class="step-num">01</div>
+      <div class="step-name" data-i18n="home.step1_name">Valoración inicial rápida</div>
+      <p class="step-desc" data-i18n="home.step1_desc">El cliente puede enviarnos fotos y medidas. La visita presencial solo si hace falta para confirmar detalles concretos.</p>
+    </div>
+    <div>
+      <div class="step-num">02</div>
+      <div class="step-name" data-i18n="home.step2_name">Presupuesto con precio cerrado</div>
+      <p class="step-desc" data-i18n="home.step2_desc">Recibes un presupuesto escrito con precio cerrado desde el inicio. Lo que acordamos es exactamente lo que pagas.</p>
+    </div>
+    <div>
+      <div class="step-num">03</div>
+      <div class="step-name" data-i18n="home.step3_name">Planificación sin improvisaciones</div>
+      <p class="step-desc" data-i18n="home.step3_desc">Definimos materiales, fechas y proceso antes de empezar. Nada se decide sobre la marcha ni se improvisa en obra.</p>
+    </div>
+    <div>
+      <div class="step-num">04</div>
+      <div class="step-name" data-i18n="home.step4_name">Instalación precisa y cuidada</div>
+      <p class="step-desc" data-i18n="home.step4_desc">Ejecutamos con técnica y orden. Cubrimos, protegemos y dejamos el espacio limpio al finalizar cada jornada de trabajo.</p>
+    </div>
+    <div>
+      <div class="step-num">05</div>
+      <div class="step-name" data-i18n="home.step5_name">Entrega solo cuando es perfecto</div>
+      <p class="step-desc" data-i18n="home.step5_desc">Revisamos cada detalle antes de dar la obra por terminada. Si algo no está al nivel que exigimos, lo corregimos antes de irnos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROYECTOS -->
+<section class="section" id="proyectos">
+  <div class="proyectos-header">
+    <div>
+      <span class="tag" data-i18n="home.proj_tag">Nuestro trabajo</span>
+      <h2 class="h2" style="margin-bottom:0" data-i18n="home.proj_h2">Proyectos<br><em>realizados</em></h2>
+    </div>
+    <a href="/proyectos" class="btn-ghost" target="_top" data-i18n="ui.all_projects">Ver todos los proyectos</a>
+  </div>
+  <div class="proyectos-grid">
+    <a href="/proyectos/oller-del-mas" class="proy w1" style="text-decoration:none;color:inherit;" target="_top">
+      <div class="proy-bg" style="background-image:url('/assets/proyectos/destacado/1.webp');background-size:cover;background-position:center;"></div>
+      <div class="proy-label">Contract · Bodega</div>
+      <div class="proy-overlay">
+        <div class="proy-tag">Manresa · Suelo y verticales</div>
+        <div class="proy-title">Oller del Mas<br>espacios que se sienten</div>
+      </div>
+    </a>
+    <a href="/proyectos/aribau-35" class="proy w2" style="text-decoration:none;color:inherit;">
+      <div class="proy-bg" style="background-image:url('/assets/proyectos/Proyecto%20Aribau%2035/1.webp');background-size:cover;background-position:center;"></div>
+      <div class="proy-label">Instalación · Eixample</div>
+      <div class="proy-overlay">
+        <div class="proy-tag">Espiga encolada · Aribau 35</div>
+        <div class="proy-title">Parquet que eleva<br>la vivienda</div>
+      </div>
+    </a>
+    <a href="/proyectos/castelldefels" class="proy w3" style="text-decoration:none;color:inherit;">
+      <div class="proy-bg" style="background-image:url('/assets/proyectos/castelldefels/1.webp');background-size:cover;background-position:center;"></div>
+      <div class="proy-label">Instalación · Castelldefels</div>
+      <div class="proy-overlay">
+        <div class="proy-tag">Roble encolado · Escaleras</div>
+        <div class="proy-title">Casas que se sienten<br>de verdad</div>
+      </div>
+    </a>
+    <a href="/proyectos/hotel-serras" class="proy w4" style="text-decoration:none;color:inherit;">
+      <div class="proy-bg" style="background-image:url('/assets/proyectos/hotel-serras/1.webp');background-size:cover;background-position:center 70%;"></div>
+      <div class="proy-label">Hotel · Contract</div>
+      <div class="proy-overlay">
+        <div class="proy-tag">Lama larga · Acabado natural</div>
+        <div class="proy-title">Hotel Serras<br>elegancia en cada detalle</div>
+      </div>
+    </a>
+    <a href="/proyectos/gimnas-metropolitan-iradier" class="proy w5" style="text-decoration:none;color:inherit;">
+      <div class="proy-bg" style="background-image:url('/assets/proyectos/gimnas-metropolitan-iradier/6.webp');background-size:cover;background-position:center;"></div>
+      <div class="proy-label">Contract · Gimnasio</div>
+      <div class="proy-overlay">
+        <div class="proy-tag">Restauración técnica · Iradier</div>
+        <div class="proy-title">Técnica y acabado<br>obligatorios</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- POR QUÉ NOSOTROS -->
+<section class="razon-section">
+  <div>
+    <span class="tag" data-i18n="home.why_tag">Por qué elegirnos</span>
+    <h2 class="h2" data-i18n="home.why_h2">Lo que nos<br><em>diferencia</em></h2>
+    <div class="razon-list">
+      <div class="razon-item">
+        <!-- Icono: diploma / especialista -->
+        <div class="razon-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="1em" height="1em"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+        <div>
+          <div class="razon-title" data-i18n="home.r1_title">Especialistas en parquet. Sin errores, sin improvisaciones.</div>
+          <p class="razon-desc" data-i18n="home.r1_desc">No hacemos de todo. Solo suelos de madera, y llevamos décadas haciéndolo. Esa especialización se traduce en menos problemas, mejores acabados y un trabajo que dura.</p>
+        </div>
+      </div>
+      <div class="razon-item">
+        <!-- Icono: precio cerrado / candado -->
+        <div class="razon-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="1em" height="1em"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><line x1="12" y1="15" x2="12" y2="17"/></svg></div>
+        <div>
+          <div class="razon-title" data-i18n="home.r2_title">Precio cerrado desde el inicio. Lo que acordamos es lo que pagas.</div>
+          <p class="razon-desc" data-i18n="home.r2_desc">El presupuesto queda por escrito antes de empezar la obra. Sin revisiones de última hora, sin costes imprevistos. Lo que firmamos es lo que facturamos.</p>
+        </div>
+      </div>
+      <div class="razon-item">
+        <!-- Icono: protección / escudo -->
+        <div class="razon-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="1em" height="1em"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div>
+          <div class="razon-title" data-i18n="home.r3_title">Instalación limpia desde el primer día. Protegemos la casa.</div>
+          <p class="razon-desc" data-i18n="home.r3_desc">Cubrimos muebles, protegemos accesos y trabajamos con orden. Cuando nos vamos, el único cambio visible es el suelo nuevo.</p>
+        </div>
+      </div>
+      <div class="razon-item">
+        <!-- Icono: persona / trato directo -->
+        <div class="razon-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="1em" height="1em"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <div>
+          <div class="razon-title" data-i18n="home.r4_title">Hablas directamente con quien ejecuta la obra. Sin intermediarios.</div>
+          <p class="razon-desc" data-i18n="home.r4_desc">No hay comerciales ni gestores en medio. Desde el primer contacto hasta el último retoque, hablas con el mismo equipo que hace el trabajo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="razon-visual">
+    <div class="cifras-grid">
+      <div class="cifra-item">
+        <div class="cifra-num">+25</div>
+        <div class="cifra-label" data-i18n="home.fig1_label">Años especializados<br>en suelos de madera</div>
+      </div>
+      <div class="cifra-item">
+        <div class="cifra-num">+400</div>
+        <div class="cifra-label" data-i18n="home.fig2_label">Proyectos completados<br>en Barcelona y área</div>
+      </div>
+      <div class="cifra-item">
+        <div class="cifra-num">&lt;24h</div>
+        <div class="cifra-label" data-i18n="home.fig3_label">Tiempo de respuesta<br>a tu consulta</div>
+      </div>
+      <div class="cifra-item">
+        <div class="cifra-num">100%</div>
+        <div class="cifra-label" data-i18n="home.fig4_label">Proyectos entregados<br>con garantía escrita</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="testi-section">
+  <span class="tag" data-i18n="home.testi_tag">Lo que dicen</span>
+  <h2 class="h2" data-i18n="home.testi_h2">La confianza que<br><em>nos avala</em></h2>
+
+  <div class="testi-carousel">
+    <div class="testi-grid" id="testiGrid"></div>
+    <div class="testi-dots" id="testiDots"></div>
+  </div>
+  <script>
+  (function(){
+    var reviews = [
+      { i:'M', name:'Mª Luisa Galán Castro', place:'Local Guide · 41 reseñas',    text:'Tengo que decir que al principio mi parquet no quedó como yo esperaba, pero la empresa respondió 100% y el resultado final ha sido excelente. El suelo ha quedado uniforme, protegido y muy bonito. Agradezco la solución y el buen trabajo realizado. RECOMENDABLE 100%' },
+      { i:'G', name:'Gabriela Salguero',     place:'3 reseñas',                    text:'Han hecho un excelente trabajo en nuestro piso, el suelo quedó como nuevo y nos han cobrado un precio razonable por hacerlo. Muy recomendados!' },
+      { i:'J', name:'Josep Maria Garcia Rius',place:'Local Guide · 33 reseñas',   text:'Muy agradecido a Daler y a su equipo por el gran trabajo realizado en la restauración del parquet de mi casa. Totalmente recomendables y de absoluta confianza.' },
+      { i:'J', name:'Josep Altés Posada',    place:'Empresa de rehabilitación',    text:'Tengo una empresa de rehabilitación y siempre cuento con ellos para los trabajos relacionados con el parquet. Sus trabajos son excelentes. Además, tanto Daler como su equipo son muy profesionales, cuesta encontrar gente como ellos. Felicidades!' },
+      { i:'S', name:'Sergi Tremp Bernat',    place:'Local Guide · 12 reseñas',    text:'Muy profesionales y cuidadosos con cada detalle. El parquet ha quedado precioso y el acabado es impecable. Puntuales, limpios y muy buen trato. Totalmente recomendables!' },
+      { i:'A', name:'Axel Alarcon',          place:'2 reseñas',                    text:'Excelente trabajo con la instalación del parquet. Fueron rápidos, profesionales y muy cuidadosos con los detalles. El resultado ha quedado muy bonito. Muy recomendables!' },
+      { i:'C', name:'M. Cruz Garcia Ruiz',   place:'Local Guide · 46 reseñas',    text:'Me han cambiado un trozo de parquet estropeado y ha ido todo perfecto. Los chicos han sido amables, educados y serviciales. ¡Un trabajo de 10!' },
+      { i:'A', name:'Álvaro de Cózar Palma', place:'3 reseñas',                   text:'Muy buen trabajo. Se nota el esfuerzo y el trabajo duro. Profesionales, cumplidores y con una comunicación constante y clara con el cliente durante todo el proceso. Muy recomendables.' },
+      { i:'E', name:'Eder Barro',            place:'8 reseñas',                    text:'Han realizado un trabajo inmejorable en la tarima de nuestro patio, y a muy buen precio. 100% recomendables!' }
+    ];
+    var PER_PAGE = 3;
+    var pages = Math.ceil(reviews.length / PER_PAGE);
+    var current = 0;
+    var timer;
+    var grid = document.getElementById('testiGrid');
+    var dotsEl = document.getElementById('testiDots');
+
+    // Crear dots
+    for (var d = 0; d < pages; d++) {
+      var dot = document.createElement('button');
+      dot.className = 'testi-dot' + (d === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', 'Reseñas ' + (d+1));
+      dot.dataset.page = d;
+      dot.addEventListener('click', function(){ goTo(+this.dataset.page, true); });
+      dotsEl.appendChild(dot);
+    }
+
+    function renderPage(n) {
+      var slice = reviews.slice(n * PER_PAGE, n * PER_PAGE + PER_PAGE);
+      grid.innerHTML = slice.map(function(r){
+        return '<div class="testi">' +
+          '<div class="testi-stars">★★★★★</div>' +
+          '<p class="testi-text">' + r.text + '</p>' +
+          '<div class="testi-author">' +
+            '<div class="testi-avatar">' + r.i + '</div>' +
+            '<div><div class="testi-name">' + r.name + '</div>' +
+            '<div class="testi-place">' + r.place + '</div></div>' +
+          '</div></div>';
+      }).join('');
+    }
+
+    function goTo(n, resetClock) {
+      if (n === current) return;
+      grid.classList.add('fading');
+      setTimeout(function(){
+        current = (n + pages) % pages;
+        renderPage(current);
+        dotsEl.querySelectorAll('.testi-dot').forEach(function(d, i){ d.classList.toggle('active', i === current); });
+        grid.classList.remove('fading');
+      }, 450);
+      if (resetClock) { clearInterval(timer); startTimer(); }
+    }
+
+    function startTimer() { timer = setInterval(function(){ goTo(current + 1, false); }, 8000); }
+
+    renderPage(0);
+    startTimer();
+  })();
+  </script>
+
+  <div class="google-bar">
+    <div class="g-logo">G</div>
+    <div class="g-score">4,9</div>
+    <div class="g-info">
+      <div class="g-stars">★★★★★</div>
+      <small data-i18n="home.g_reviews">+60 reseñas verificadas en Google</small>
+    </div>
+    <a href="https://www.google.com/maps/place/?q=place_id:ChIJz-XOimO9pBIRFkjf8-iPIK0" target="_blank" rel="noopener" class="g-review-btn">
+      <span data-i18n="home.g_cta">Déjanos tu reseña →</span>
+    </a>
+  </div>
+</section>
+
+<!-- BLOG LINKS -->
+<section style="padding:88px 64px;border-top:1px solid var(--border);">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px;flex-wrap:wrap;gap:20px;">
+      <div>
+        <span style="display:inline-flex;align-items:center;gap:12px;font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">
+          <span style="display:inline-block;width:24px;height:1px;background:var(--gold);"></span data-i18n="home.blog_tag">Guías y consejos
+        </span>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(34px,3.8vw,52px);font-weight:300;line-height:1.08;">Del blog de<br><em style="font-style:italic;color:var(--gold);">parquet</em></h2>
+      </div>
+      <a href="/blog" style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--warm-gray);text-decoration:none;border-bottom:1px solid var(--border);padding-bottom:4px;transition:color .3s,border-color .3s;" onmouseover="this.style.color='var(--cream)';this.style.borderColor='rgba(200,169,110,.4)'" onmouseout="this.style.color='var(--warm-gray)';this.style.borderColor='var(--border)'" data-i18n="ui.all_articles">Ver todos los artículos →</a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:4px;">
+      <a href="/blog/precio-parquet-barcelona" style="text-decoration:none;color:inherit;border:1px solid var(--border);padding:32px 28px;display:flex;flex-direction:column;gap:16px;background:var(--surface);transition:border-color .35s,transform .35s;" onmouseover="this.style.borderColor='rgba(200,169,110,.25)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='rgba(245,240,232,0.07)';this.style.transform='translateY(0)'">
+        <span style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);" data-i18n="home.blog_c1_cat">Precios · 5 min</span>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;line-height:1.2;" data-i18n="home.blog_c1_h3">Precio de poner parquet en Barcelona en 2026</h3>
+        <p style="font-size:13px;line-height:1.75;color:var(--warm-gray);" data-i18n="home.blog_c1_p">Rangos reales por m², ejemplos de presupuesto y los factores que más influyen en el coste final.</p>
+        <span style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--cream);opacity:.6;margin-top:auto;">Leer artículo →</span>
+      </a>
+      <a href="/blog/lijar-parquet-barcelona" style="text-decoration:none;color:inherit;border:1px solid var(--border);padding:32px 28px;display:flex;flex-direction:column;gap:16px;background:var(--surface);transition:border-color .35s,transform .35s;" onmouseover="this.style.borderColor='rgba(200,169,110,.25)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='rgba(245,240,232,0.07)';this.style.transform='translateY(0)'">
+        <span style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);" data-i18n="home.blog_c2_cat">Restauración · 5 min</span>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;line-height:1.2;" data-i18n="home.blog_c2_h3">¿Restaurar parquet o poner uno nuevo? Qué sale más rentable</h3>
+        <p style="font-size:13px;line-height:1.75;color:var(--warm-gray);" data-i18n="home.blog_c2_p">Criterios claros para decidir con diferencias de precio reales y consejos profesionales.</p>
+        <span style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--cream);opacity:.6;margin-top:auto;">Leer artículo →</span>
+      </a>
+      <a href="/blog/instalacion-parquet-profesional" style="text-decoration:none;color:inherit;border:1px solid var(--border);padding:32px 28px;display:flex;flex-direction:column;gap:16px;background:var(--surface);transition:border-color .35s,transform .35s;" onmouseover="this.style.borderColor='rgba(200,169,110,.25)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='rgba(245,240,232,0.07)';this.style.transform='translateY(0)'">
+        <span style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);" data-i18n="home.blog_c3_cat">Instalación · 6 min</span>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;line-height:1.2;" data-i18n="home.blog_c3_h3">Cómo se instala un parquet profesionalmente</h3>
+        <p style="font-size:13px;line-height:1.75;color:var(--warm-gray);" data-i18n="home.blog_c3_p">Preparación del soporte, control de humedad y acabados: lo que separa una instalación que dura de una que falla.</p>
+        <span style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--cream);opacity:.6;margin-top:auto;">Leer artículo →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-section">
+  <span class="cta-tag" data-i18n="home.cta_tag">¿Tienes un proyecto en mente?</span>
+  <h2 class="cta-title" data-i18n="home.cta_title">Empieza con una<br><em>visita sin coste</em></h2>
+  <p class="cta-desc" data-i18n="home.cta_desc">Cuéntanos qué necesitas. Venimos a tu espacio, evaluamos la situación y te enviamos un presupuesto detallado en menos de 48 horas.</p>
+  <div class="cta-row">
+    <a href="#contacto" class="btn-cream" data-i18n="home.cta_btn1">Solicitar visita gratuita</a>
+    <a href="tel:+34603014636" class="btn-outline"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="1em" height="1em" aria-hidden="true" style="color:var(--gold);margin-right:10px;vertical-align:-3px;position:relative;top:3px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.11 1h3a2 2 0 0 1 2 1.72c.13.98.38 1.93.74 2.84a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6 6l2.05-2.05a2 2 0 0 1 2.11-.45c.91.36 1.86.61 2.84.74A2 2 0 0 1 22 16.92z"/></svg>Llamar ahora</a>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="contacto" id="contacto">
+  <div class="contacto-left">
+    <h3 data-i18n="home.contact_h3">Hablemos de<br><em>tu proyecto</em></h3>
+    <p data-i18n="home.contact_p">Sin compromiso. Sin presión. Solo un rato para entender qué necesitas y darte el mejor consejo, sea cual sea tu situación.</p>
+    <div class="c-links">
+      <a href="tel:+34603014636" class="c-link">
+        <div class="c-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="1em" height="1em"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.11 1h3a2 2 0 0 1 2 1.72c.13.98.38 1.93.74 2.84a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6 6l2.05-2.05a2 2 0 0 1 2.11-.45c.91.36 1.86.61 2.84.74A2 2 0 0 1 22 16.92z"/></svg></div>
+        +34 603 01 46 36
+      </a>
+      <a href="mailto:hola@razolparquet.com" class="c-link">
+        <div class="c-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="1em" height="1em"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
+        hola@razolparquet.com
+      </a>
+      <div class="c-link">
+        <div class="c-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="1em" height="1em"><path d="M12 21s-7-4.35-7-11a7 7 0 0 1 14 0c0 6.65-7 11-7 11z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <span data-i18n="home.contact_city">Barcelona y área metropolitana</span>
+      </div>
+      <div class="c-link">
+        <div class="c-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="1em" height="1em"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <span data-i18n="home.contact_hrs">Lun–Vie: 9:00 – 18:00</span>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="form-row">
+      <div class="fg">
+        <label data-i18n="home.form_nombre">Nombre</label>
+        <input id="cf-nombre" type="text" placeholder="Tu nombre">
+      </div>
+      <div class="fg">
+        <label data-i18n="home.form_tel">Teléfono</label>
+        <input id="cf-telefono" type="tel" placeholder="612 345 678">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="fg">
+        <label data-i18n="home.form_email">Email (opcional)</label>
+        <input id="cf-email" type="email" placeholder="tu@email.com">
+      </div>
+      <div class="fg">
+        <label data-i18n="home.form_m2">Metros cuadrados (aprox.)</label>
+        <input id="cf-metros" type="text" placeholder="Ej: 80 m²">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="fg">
+        <label data-i18n="home.form_service">¿Qué necesitas?</label>
+        <select id="cf-servicio">
+          <option data-i18n="home.form_srv1">Instalación nueva</option>
+          <option data-i18n="home.form_srv2">Lijado / Restauración</option>
+          <option data-i18n="home.form_srv3">Reparación de zona</option>
+          <option data-i18n="home.form_srv4">Tarima exterior</option>
+          <option data-i18n="home.form_srv5">No sé todavía</option>
+        </select>
+      </div>
+      <div class="fg">
+        <label data-i18n="home.form_zone">Zona</label>
+        <input id="cf-zona" type="text" placeholder="Ej: Eixample, Sarrià...">
+      </div>
+    </div>
+    <div class="fg">
+      <label data-i18n="home.form_msg">Cuéntanos algo más (opcional)</label>
+      <textarea id="cf-mensaje" placeholder="Estado actual del suelo, tipo de vivienda, plazo..."></textarea>
+    </div>
+    <button class="form-submit" id="cf-submit" data-i18n="home.form_btn">Solicitar visita y presupuesto gratuito →</button>
+    <p class="form-note" id="cf-note" data-i18n="home.form_note">Sin compromisos. Te respondemos en menos de 24 horas.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="/" class="logo" style="font-size:17px;" target="_top"><img src="/assets/logorazol.svg" alt="Razol Parquet" height="52" style="display:block;"></a>
+  <p>GNERAI 2026</p>
+  <div class="foot-links">
+    <a href="/aviso-legal" data-i18n="ui.footer_legal">Aviso legal</a>
+    <a href="/privacidad" data-i18n="ui.footer_priv">Privacidad</a>
+    <a href="/cookies" data-i18n="ui.footer_cook">Cookies</a>
+  </div>
+</footer>
+
+<!-- WHATSAPP -->
+<a class="wa" href="https://wa.me/34603014636?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20informaci%C3%B3n%20sobre%20un%20presupuesto%20de%20parquet" target="_blank" aria-label="WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24" fill="white">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<script>
+  // Hamburguesa
+  (function(){
+    const burger = document.getElementById('navBurger');
+    const links  = document.querySelector('.nav-links');
+    if (!burger || !links) return;
+    burger.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      burger.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        links.classList.remove('open');
+        burger.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+  })();
+
+  // Nav scroll + progress bar
+  const nav = document.getElementById('nav');
+  const progressBar = document.getElementById('scroll-progress');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+    const total = document.documentElement.scrollHeight - window.innerHeight;
+    if (total > 0) progressBar.style.width = (window.scrollY / total * 100) + '%';
+  }, { passive: true });
+
+  // Números que cuentan
+  const counters = document.querySelectorAll('[data-count]');
+  if (counters.length && 'IntersectionObserver' in window) {
+    const countObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const target = +el.dataset.count;
+        const prefix = el.dataset.prefix || '';
+        const duration = 1400;
+        const start = performance.now();
+        const update = (now) => {
+          const elapsed = now - start;
+          const progress = Math.min(elapsed / duration, 1);
+          const ease = 1 - Math.pow(1 - progress, 3);
+          el.textContent = prefix + Math.floor(ease * target);
+          if (progress < 1) requestAnimationFrame(update);
+        };
+        requestAnimationFrame(update);
+        countObserver.unobserve(el);
+      });
+    }, { threshold: 0.5 });
+    counters.forEach(c => countObserver.observe(c));
+  }
+
+  // Hero slider (home1–home5)
+  const heroSlides = document.querySelectorAll('.hero-slide');
+  if (heroSlides.length > 1) {
+    let currentHero = 0;
+    setInterval(() => {
+      heroSlides[currentHero].classList.remove('is-active');
+      currentHero = (currentHero + 1) % heroSlides.length;
+      heroSlides[currentHero].classList.add('is-active');
+    }, 10000); // 10 segundos
+  }
+
+  // Antes / Después sliders
+  function initBeforeAfter(slider) {
+    const afterImg = slider.querySelector('.ba-img.ba-after');
+    const handle = slider.querySelector('.ba-handle');
+    if (!afterImg || !handle) return;
+
+    let isDown = false;
+
+    const moveTo = (clientX) => {
+      const rect = slider.getBoundingClientRect();
+      let x = clientX - rect.left;
+      x = Math.max(0, Math.min(x, rect.width));
+      const pct = (x / rect.width) * 100;
+      // recorta la imagen de después sin escalar
+      afterImg.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
+      handle.style.left = pct + '%';
+    };
+
+    // Desktop (ratón): mover solo pasando por encima
+    slider.addEventListener('pointermove', (e) => {
+      if (e.pointerType === 'mouse') {
+        moveTo(e.clientX);
+      } else if (isDown) {
+        moveTo(e.clientX);
+      }
+    });
+
+    // Táctil: solo en escritorio (pointer:fine = ratón)
+    if (window.matchMedia('(pointer: fine)').matches) {
+      slider.addEventListener('pointerdown', (e) => {
+        if (e.pointerType === 'mouse') return;
+        isDown = true;
+        slider.setPointerCapture(e.pointerId);
+        moveTo(e.clientX);
+      });
+
+      window.addEventListener('pointerup', () => {
+        isDown = false;
+      });
+    }
+  }
+
+  // Solo inicializar el slider interactivo en escritorio con ratón
+  if (window.matchMedia('(pointer: fine)').matches) {
+    document.querySelectorAll('[data-ba]').forEach(initBeforeAfter);
+  }
+
+  // Formulario contacto home
+  document.getElementById('cf-submit').addEventListener('click', async () => {
+    const nombre   = document.getElementById('cf-nombre').value.trim();
+    const telefono = document.getElementById('cf-telefono').value.trim();
+    const email    = document.getElementById('cf-email').value.trim();
+    const metros   = document.getElementById('cf-metros').value.trim();
+    const servicio = document.getElementById('cf-servicio').value;
+    const zona     = document.getElementById('cf-zona').value.trim();
+    const mensaje  = document.getElementById('cf-mensaje').value.trim();
+    const btn      = document.getElementById('cf-submit');
+    const note     = document.getElementById('cf-note');
+
+    if (!nombre || !telefono) {
+      note.textContent = 'Por favor, rellena el nombre y el teléfono.';
+      note.style.color = '#c0392b';
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = 'Enviando...';
+    note.textContent = '';
+    note.style.color = '';
+
+    try {
+      const res = await fetch('/api/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          nombre, telefono, email: email || null,
+          zona: zona || 'Barcelona',
+          servicio, metros: metros || 'No lo sé',
+          mensaje: mensaje || null,
+          fuente: 'Formulario Hablemos',
+        }),
+      });
+      if (!res.ok) throw new Error();
+      btn.textContent = '✓ Solicitud enviada';
+      btn.style.background = '#2d6a4f';
+      note.textContent = 'Te llamamos en menos de 24 horas. ¡Gracias!';
+    } catch {
+      btn.disabled = false;
+      btn.textContent = 'Solicitar visita y presupuesto gratuito →';
+      note.textContent = 'Error al enviar. Llámanos al +34 603 01 46 36.';
+      note.style.color = '#c0392b';
+    }
+  });
+</script>
+
+<script src="cookie-banner.js"></script>
+  <script src="mobile-menu.js"></script>
+  <script src="/translations.js"></script>
+  <script src="/i18n.js"></script>
+</body>
+</html>

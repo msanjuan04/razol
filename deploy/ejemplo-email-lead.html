@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Preview Emails — Razol Parquet</title>
+<style>
+  body { margin: 0; padding: 24px 16px; background: #0d0b08; font-family: Arial, sans-serif; }
+  .controls { max-width: 620px; margin: 0 auto 20px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .controls span { font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: #8C7B6B; margin-right: 4px; }
+  .controls button {
+    padding: 8px 16px; border: 1px solid rgba(200,169,110,.3); border-radius: 2px; cursor: pointer;
+    font-size: 11px; letter-spacing: .15em; text-transform: uppercase; transition: all .15s;
+    background: transparent; color: #C8A96E;
+  }
+  .controls button:hover, .controls button.active { background: #C8A96E; color: #19150F; border-color: #C8A96E; }
+  .sep { width: 1px; height: 28px; background: rgba(200,169,110,.2); margin: 0 4px; }
+</style>
+</head>
+<body>
+
+<div class="controls">
+  <span>Admin:</span>
+  <button onclick="show('hot')"  id="btn-hot">🔥 CALIENTE</button>
+  <button onclick="show('warm')" id="btn-warm">🌤️ TEMPLADO</button>
+  <button onclick="show('cold')" id="btn-cold">❄️ FRÍO</button>
+  <div class="sep"></div>
+  <span>Cliente:</span>
+  <button onclick="show('client')" id="btn-client">Confirmación</button>
+</div>
+
+<div id="preview"></div>
+
+<script>
+const BRAND = {
+  dark:       '#19150F',
+  darkCard:   '#211D16',
+  darkBorder: 'rgba(200,169,110,0.15)',
+  gold:       '#C8A96E',
+  goldLight:  '#D4BA85',
+  cream:      '#F5F0E8',
+  warmGray:   '#8C7B6B',
+};
+
+const leads = {
+  hot: {
+    nombre: 'Marcos Vidal', telefono: '634 821 047', email: 'marcos.vidal@gmail.com',
+    zona: 'Eixample, Barcelona', mensaje: 'Reforma integral del piso, suelo muy deteriorado, necesito presupuesto urgente.',
+    servicio: 'Instalación de parquet nuevo', metros: 'Más de 200m²', plazo: 'Lo antes posible',
+    puntosServicio: 3, puntosMetros: 4, puntosPlayzo: 4, puntosEmail: 1, total: 12,
+    calificacion: 'CALIENTE', accion: 'Llamar en las próximas 2 horas', emoji: '🔥', badgeColor: '#C0392B',
+  },
+  warm: {
+    nombre: 'Laura Soler', telefono: '612 445 789', email: null,
+    zona: 'Sarrià - Sant Gervasi', mensaje: null,
+    servicio: 'Lijado y restauración de parquet existente', metros: '50–100m²', plazo: 'En 1-2 meses',
+    puntosServicio: 3, puntosMetros: 2, puntosPlayzo: 3, puntosEmail: 0, total: 8,
+    calificacion: 'TEMPLADO', accion: 'Llamar en el día', emoji: '🌤️', badgeColor: '#C0700A',
+  },
+  cold: {
+    nombre: 'Joan Puig', telefono: '699 001 234', email: null,
+    zona: 'Gràcia', mensaje: null,
+    servicio: 'No sé todavía — necesito asesoramiento', metros: 'Menos de 50m²', plazo: 'Solo quiero valorar opciones',
+    puntosServicio: 1, puntosMetros: 1, puntosPlayzo: 1, puntosEmail: 0, total: 3,
+    calificacion: 'FRÍO', accion: 'Email de seguimiento — llamar esta semana', emoji: '❄️', badgeColor: '#1D5FA8',
+  },
+};
+
+function fila(label, value) {
+  return `<tr>
+    <td style="padding:10px 0;border-bottom:1px solid ${BRAND.darkBorder};font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:${BRAND.gold};width:38%;vertical-align:top;">${label}</td>
+    <td style="padding:10px 0 10px 16px;border-bottom:1px solid ${BRAND.darkBorder};font-size:14px;color:${BRAND.cream};font-weight:300;">${value || '—'}</td>
+  </tr>`;
+}
+function filaScore(label, value) {
+  return `<tr>
+    <td style="padding:8px 0;border-bottom:1px solid ${BRAND.darkBorder};font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:${BRAND.warmGray};width:60%;">${label}</td>
+    <td style="padding:8px 0 8px 16px;border-bottom:1px solid ${BRAND.darkBorder};font-size:13px;color:${BRAND.gold};text-align:right;">${value}</td>
+  </tr>`;
+}
+function filaCliente(label, value) {
+  if (!value) return '';
+  return `<tr>
+    <td style="padding:10px 0;border-bottom:1px solid ${BRAND.darkBorder};font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:${BRAND.gold};width:40%;vertical-align:top;">${label}</td>
+    <td style="padding:10px 0 10px 16px;border-bottom:1px solid ${BRAND.darkBorder};font-size:14px;color:${BRAND.cream};font-weight:300;">${value}</td>
+  </tr>`;
+}
+
+function buildAdmin(d) {
+  return `<div style="max-width:580px;margin:0 auto;border:1px solid ${BRAND.darkBorder};border-radius:2px;overflow:hidden;">
+  <div style="background:${BRAND.dark};padding:28px 36px;border-bottom:1px solid ${BRAND.darkBorder};">
+    <p style="margin:0;font-size:10px;letter-spacing:.4em;text-transform:uppercase;"><span style="color:${BRAND.gold};">RAZOL</span><span style="color:${BRAND.cream};">PARQUET</span></p>
+    <p style="margin:6px 0 0;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:${BRAND.warmGray};">Nueva solicitud recibida · 17/03/2026, 10:24</p>
+  </div>
+  <div style="background:${d.badgeColor};padding:20px 36px;">
+    <table width="100%"><tr>
+      <td><p style="margin:0;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,0.7);">Lead calificado</p>
+          <p style="margin:4px 0 0;font-size:22px;font-weight:700;color:#fff;letter-spacing:.05em;">${d.emoji} ${d.calificacion}</p></td>
+      <td style="text-align:right;vertical-align:middle;">
+          <p style="margin:0;font-size:28px;font-weight:700;color:#fff;">${d.total}<span style="font-size:14px;font-weight:400;opacity:.7;">/12</span></p>
+          <p style="margin:2px 0 0;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,0.7);">puntos</p></td>
+    </tr></table>
+  </div>
+  <div style="background:${BRAND.darkCard};padding:14px 36px;border-bottom:1px solid ${BRAND.darkBorder};">
+    <p style="margin:0;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:${BRAND.gold};">▶ ${d.accion}</p>
+  </div>
+  <div style="background:${BRAND.dark};padding:28px 36px 0;">
+    <p style="margin:0 0 16px;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:${BRAND.gold};">Datos de contacto</p>
+    <table width="100%" cellpadding="0" cellspacing="0">
+      ${fila('Nombre', d.nombre)}${fila('Teléfono', d.telefono)}${fila('Email', d.email || 'No proporcionado')}${fila('Zona', d.zona)}
+    </table>
+  </div>
+  <div style="background:${BRAND.dark};padding:24px 36px 0;">
+    <p style="margin:0 0 16px;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:${BRAND.gold};">Detalles del proyecto</p>
+    <table width="100%" cellpadding="0" cellspacing="0">
+      ${fila('Servicio', d.servicio)}${fila('Metros', d.metros)}${fila('Plazo', d.plazo)}${fila('Mensaje', d.mensaje)}
+    </table>
+  </div>
+  <div style="background:${BRAND.darkCard};margin:24px 36px;padding:20px 24px;border:1px solid ${BRAND.darkBorder};">
+    <p style="margin:0 0 14px;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:${BRAND.warmGray};">Desglose del scoring</p>
+    <table width="100%" cellpadding="0" cellspacing="0">
+      ${filaScore('Tipo de servicio', `${d.puntosServicio} / 3 pts`)}
+      ${filaScore('Metros cuadrados', `${d.puntosMetros} / 4 pts`)}
+      ${filaScore('Plazo',            `${d.puntosPlayzo} / 4 pts`)}
+      ${filaScore('Email aportado',   `${d.puntosEmail} / 1 pt`)}
+    </table>
+    <table width="100%" cellpadding="0" cellspacing="0" style="margin-top:10px;">
+      <tr>
+        <td style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:${BRAND.cream};">Total</td>
+        <td style="text-align:right;font-size:18px;color:${BRAND.gold};"><strong>${d.total} / 12</strong></td>
+      </tr>
+    </table>
+  </div>
+  <div style="background:${BRAND.dark};padding:16px 36px;border-top:1px solid ${BRAND.darkBorder};text-align:center;">
+    <p style="margin:0;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:${BRAND.warmGray};">Razol Parquet · Barcelona · razolparquet.com</p>
+  </div>
+</div>`;
+}
+
+function buildClient() {
+  const d = leads.hot; // usamos Marcos con email para el ejemplo cliente
+  const nombre1 = d.nombre.split(' ')[0];
+  return `<div style="max-width:580px;margin:0 auto;border:1px solid ${BRAND.darkBorder};border-radius:2px;overflow:hidden;">
+  <div style="background:${BRAND.dark};padding:32px 36px;text-align:center;border-bottom:1px solid ${BRAND.darkBorder};">
+    <p style="margin:0;font-size:13px;letter-spacing:.5em;text-transform:uppercase;"><span style="color:${BRAND.gold};">RAZOL</span><span style="color:${BRAND.cream};">PARQUET</span></p>
+    <div style="width:32px;height:1px;background:${BRAND.gold};margin:16px auto;"></div>
+    <p style="margin:0;font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:${BRAND.warmGray};">Especialistas en suelos de madera · Barcelona</p>
+  </div>
+  <div style="background:${BRAND.dark};padding:36px 36px 28px;text-align:center;">
+    <p style="margin:0 0 10px;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:${BRAND.gold};">Solicitud recibida</p>
+    <h1 style="margin:0 0 16px;font-size:28px;font-weight:300;color:${BRAND.cream};font-family:'Georgia',serif;line-height:1.3;">Hola, <em style="font-style:italic;color:${BRAND.gold};">${nombre1}</em></h1>
+    <p style="margin:0;font-size:15px;color:${BRAND.warmGray};font-weight:300;line-height:1.7;">Hemos recibido tu solicitud y nos pondremos en contacto contigo a la mayor brevedad para preparar tu presupuesto personalizado.</p>
+  </div>
+  <div style="background:${BRAND.darkCard};padding:28px 36px;border-top:1px solid ${BRAND.darkBorder};border-bottom:1px solid ${BRAND.darkBorder};">
+    <p style="margin:0 0 16px;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:${BRAND.gold};">Tu solicitud</p>
+    <table width="100%" cellpadding="0" cellspacing="0">
+      ${filaCliente('Servicio', d.servicio)}${filaCliente('Metros', d.metros)}${filaCliente('Zona', d.zona)}${filaCliente('Plazo', d.plazo)}${filaCliente('Mensaje', d.mensaje)}
+    </table>
+  </div>
+  <div style="background:${BRAND.dark};padding:28px 36px;">
+    <p style="margin:0 0 16px;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:${BRAND.gold};">¿Qué pasa ahora?</p>
+    <table width="100%" cellpadding="0" cellspacing="0">
+      <tr><td style="vertical-align:top;padding-right:14px;"><p style="margin:0;width:24px;height:24px;background:${BRAND.darkCard};border:1px solid ${BRAND.darkBorder};color:${BRAND.gold};text-align:center;line-height:24px;font-size:11px;">1</p></td>
+          <td style="vertical-align:top;padding-bottom:18px;"><p style="margin:0 0 3px;font-size:13px;color:${BRAND.cream};">Revisamos tu solicitud</p><p style="margin:0;font-size:12px;color:${BRAND.warmGray};">Analizamos los detalles de tu proyecto en menos de 24 h.</p></td></tr>
+      <tr><td style="vertical-align:top;padding-right:14px;"><p style="margin:0;width:24px;height:24px;background:${BRAND.darkCard};border:1px solid ${BRAND.darkBorder};color:${BRAND.gold};text-align:center;line-height:24px;font-size:11px;">2</p></td>
+          <td style="vertical-align:top;padding-bottom:18px;"><p style="margin:0 0 3px;font-size:13px;color:${BRAND.cream};">Te llamamos para concretar</p><p style="margin:0;font-size:12px;color:${BRAND.warmGray};">Un especialista se pondrá en contacto contigo al ${d.telefono}.</p></td></tr>
+      <tr><td style="vertical-align:top;padding-right:14px;"><p style="margin:0;width:24px;height:24px;background:${BRAND.darkCard};border:1px solid ${BRAND.darkBorder};color:${BRAND.gold};text-align:center;line-height:24px;font-size:11px;">3</p></td>
+          <td style="vertical-align:top;"><p style="margin:0 0 3px;font-size:13px;color:${BRAND.cream};">Visita y presupuesto gratuito</p><p style="margin:0;font-size:12px;color:${BRAND.warmGray};">Agendamos la visita para evaluar el espacio sin compromiso.</p></td></tr>
+    </table>
+  </div>
+  <div style="background:${BRAND.dark};padding:20px 36px;border-top:1px solid ${BRAND.darkBorder};text-align:center;">
+    <p style="margin:0 0 6px;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:${BRAND.warmGray};">¿Tienes alguna duda?</p>
+    <p style="margin:0 0 16px;font-size:13px;color:${BRAND.gold};">hola@razolparquet.com</p>
+    <p style="margin:0;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:${BRAND.warmGray};opacity:.6;">Razol Parquet · Barcelona · razolparquet.com</p>
+  </div>
+</div>`;
+}
+
+function show(type) {
+  document.querySelectorAll('.controls button').forEach(b => b.classList.remove('active'));
+  document.getElementById('btn-' + type).classList.add('active');
+  if (type === 'client') {
+    document.getElementById('preview').innerHTML = buildClient();
+  } else {
+    document.getElementById('preview').innerHTML = buildAdmin(leads[type]);
+  }
+}
+
+show('hot');
+</script>
+  <script src="/translations.js"></script>
+  <script src="/i18n.js"></script>
+</body>
+</html>

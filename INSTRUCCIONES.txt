@@ -1,0 +1,46 @@
+COPIA DE SEGURIDAD - RAZOL PARQUET
+Fecha de backup: 2026-03-05
+
+Contenido de esta carpeta:
+- Archivos HTML de la web
+- server.cjs
+- package.json
+
+OPCION 1 (RAPIDA)
+1) Abre el archivo index.html con doble clic.
+
+OPCION 2 (RECOMENDADA, TODO POR SERVIDOR LOCAL)
+Requisitos:
+- Tener Node.js instalado (version 18 o superior recomendada)
+
+Pasos:
+1) Abre una terminal en esta carpeta.
+2) Ejecuta: npm install
+3) Ejecuta:
+   npm run dev
+   (recarga automatica al editar archivos)
+   (alternativa sin live reload: node server.cjs)
+   (sin Node.js: python3 server.py)
+4) Abre en el navegador: http://127.0.0.1:5173/
+5) Para parar el servidor: Ctrl + C
+
+NOTAS
+- Mantén todos los archivos juntos en la misma carpeta.
+- Las tipografias de Google y enlaces WhatsApp necesitan internet.
+- Si el puerto 5173 esta ocupado, cambia la constante PORT en server.cjs.
+
+TEXTO CORTO PARA ENVIAR A ALGUIEN
+"Descarga la carpeta completa, abre terminal dentro, ejecuta: npm install && npm run dev. Luego entra en http://127.0.0.1:5173/"
+
+--- SUBIR LA WEB POR FILEZILLA (FTP) ---
+1) En la carpeta del proyecto ejecuta: npm run build
+2) Se crea la carpeta deploy/ con SOLO lo publico (listo para el servidor).
+3) En FileZilla, sube el CONTENIDO de deploy/ a public_html (o htdocs, segun tu hosting).
+   Es decir: index.html, todos los .html, robots.txt, sitemap.xml y la carpeta assets/.
+
+NO subas al servidor: node_modules/, .env, server.cjs, server.py, package.json (no hacen falta en hosting solo estatico).
+
+IMPORTANTE — Formulario de contacto:
+La pagina de contacto usa /api/submit; eso solo funciona si corres "node server.cjs" en un servidor con Node.js.
+En un hosting normal (solo PHP/archivos estaticos) el envio del formulario NO funcionara hasta que
+tengas el backend en otro sitio (VPS, Railway, etc.) o cambies el fetch a una URL de API publica.

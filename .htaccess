@@ -1,0 +1,175 @@
+# Generado con: node scripts/generate-htaccess.cjs
+# Requiere: AllowOverride FileInfo (o All) y mod_rewrite
+DirectoryIndex razolparquet-v2.html index.html
+RewriteEngine On
+RewriteBase /
+
+# --- 301: index.html en raíz → / ---
+RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+RewriteRule ^index\.html$ / [R=301,L]
+
+# --- 301: *.html legacy → URL limpia ---
+RewriteCond %{THE_REQUEST} \s/+razolparquet-v2\.html[\s?] [NC]
+RewriteRule ^razolparquet-v2\.html$ / [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+razolparquet-servicios\.html[\s?] [NC]
+RewriteRule ^razolparquet-servicios\.html$ /servicios [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+razolparquet-proyectos\.html[\s?] [NC]
+RewriteRule ^razolparquet-proyectos\.html$ /proyectos [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+razolparquet-proceso\.html[\s?] [NC]
+RewriteRule ^razolparquet-proceso\.html$ /como-trabajamos [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+razolparquet-blog\.html[\s?] [NC]
+RewriteRule ^razolparquet-blog\.html$ /blog [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+razolparquet-contacto\.html[\s?] [NC]
+RewriteRule ^razolparquet-contacto\.html$ /contacto [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+razolparquet-showroom\.html[\s?] [NC]
+RewriteRule ^razolparquet-showroom\.html$ /showroom [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+proyecto-destacado\.html[\s?] [NC]
+RewriteRule ^proyecto-destacado\.html$ /proyectos/oller-del-mas [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+proyecto-hotel-serras\.html[\s?] [NC]
+RewriteRule ^proyecto-hotel-serras\.html$ /proyectos/hotel-serras [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+proyecto-olivella\.html[\s?] [NC]
+RewriteRule ^proyecto-olivella\.html$ /proyectos/olivella [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+proyecto-torre-del-remei\.html[\s?] [NC]
+RewriteRule ^proyecto-torre-del-remei\.html$ /proyectos/torre-del-remei [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+proyecto-palau-blaugrana\.html[\s?] [NC]
+RewriteRule ^proyecto-palau-blaugrana\.html$ /proyectos/palau-blaugrana [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+proyecto-gimnas-metropolitan-iradier\.html[\s?] [NC]
+RewriteRule ^proyecto-gimnas-metropolitan-iradier\.html$ /proyectos/gimnas-metropolitan-iradier [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+proyecto-aribau-35\.html[\s?] [NC]
+RewriteRule ^proyecto-aribau-35\.html$ /proyectos/aribau-35 [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+proyecto-castelldefels\.html[\s?] [NC]
+RewriteRule ^proyecto-castelldefels\.html$ /proyectos/castelldefels [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+proyecto-abacus-orquinaona\.html[\s?] [NC]
+RewriteRule ^proyecto-abacus-orquinaona\.html$ /proyectos/abacus-orquinaona [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+proyecto-terraza-gracia\.html[\s?] [NC]
+RewriteRule ^proyecto-terraza-gracia\.html$ /proyectos/terraza-gracia [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+proyecto-terraza-st-cugat\.html[\s?] [NC]
+RewriteRule ^proyecto-terraza-st-cugat\.html$ /proyectos/terraza-sant-cugat [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+proyecto-terraza-st-just\.html[\s?] [NC]
+RewriteRule ^proyecto-terraza-st-just\.html$ /proyectos/terraza-sant-just [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+proyecto-terraza-badalona\.html[\s?] [NC]
+RewriteRule ^proyecto-terraza-badalona\.html$ /proyectos/terraza-badalona [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+proyecto-terraza-bonanova\.html[\s?] [NC]
+RewriteRule ^proyecto-terraza-bonanova\.html$ /proyectos/terraza-bonanova [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+proyecto-terraza-costa-brava\.html[\s?] [NC]
+RewriteRule ^proyecto-terraza-costa-brava\.html$ /proyectos/terraza-costa-brava [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+blog-lijar-parquet-barcelona\.html[\s?] [NC]
+RewriteRule ^blog-lijar-parquet-barcelona\.html$ /blog/lijar-parquet-barcelona [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+blog-antes-despues-parquet-barcelona\.html[\s?] [NC]
+RewriteRule ^blog-antes-despues-parquet-barcelona\.html$ /blog/restaurar-parquet-barcelona [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+blog-diferencias-barniz-aceite-parquet\.html[\s?] [NC]
+RewriteRule ^blog-diferencias-barniz-aceite-parquet\.html$ /blog/barniz-o-aceite-parquet [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+blog-errores-al-instalar-parquet-barcelona\.html[\s?] [NC]
+RewriteRule ^blog-errores-al-instalar-parquet-barcelona\.html$ /blog/errores-instalar-parquet [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+blog-mantenimiento-parquet-dia-a-dia\.html[\s?] [NC]
+RewriteRule ^blog-mantenimiento-parquet-dia-a-dia\.html$ /blog/mantenimiento-parquet [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+blog-parquet-nuevo-o-restaurar-eixample\.html[\s?] [NC]
+RewriteRule ^blog-parquet-nuevo-o-restaurar-eixample\.html$ /blog/parquet-nuevo-o-restaurar-eixample [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+blog-parquet-suelo-radiante-barcelona\.html[\s?] [NC]
+RewriteRule ^blog-parquet-suelo-radiante-barcelona\.html$ /blog/parquet-suelo-radiante [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+blog-tarima-exterior-castelldefels-sitges\.html[\s?] [NC]
+RewriteRule ^blog-tarima-exterior-castelldefels-sitges\.html$ /blog/tarima-exterior-castelldefels-sitges [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+blog-tonos-parquet-moda-barcelona\.html[\s?] [NC]
+RewriteRule ^blog-tonos-parquet-moda-barcelona\.html$ /blog/tonos-parquet [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+tarima-exterior-barcelona\.html[\s?] [NC]
+RewriteRule ^tarima-exterior-barcelona\.html$ /tarima-exterior-barcelona [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+barnizado-parquet-barcelona\.html[\s?] [NC]
+RewriteRule ^barnizado-parquet-barcelona\.html$ /barnizado-parquet-barcelona [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+instalacion-parquet-barcelona\.html[\s?] [NC]
+RewriteRule ^instalacion-parquet-barcelona\.html$ /instalacion-parquet-barcelona [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+lijar-restaurar-parquet-barcelona\.html[\s?] [NC]
+RewriteRule ^lijar-restaurar-parquet-barcelona\.html$ /lijar-restaurar-parquet-barcelona [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+aviso-legal\.html[\s?] [NC]
+RewriteRule ^aviso-legal\.html$ /aviso-legal [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+privacidad\.html[\s?] [NC]
+RewriteRule ^privacidad\.html$ /privacidad [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+cookies\.html[\s?] [NC]
+RewriteRule ^cookies\.html$ /cookies [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+404\.html[\s?] [NC]
+RewriteRule ^404\.html$ /404 [R=301,L]
+
+# --- Reescritura interna: ruta limpia → fichero ---
+RewriteRule ^proyectos/oller-del-mas/?$ proyecto-destacado.html [L]
+RewriteRule ^proyectos/hotel-serras/?$ proyecto-hotel-serras.html [L]
+RewriteRule ^proyectos/olivella/?$ proyecto-olivella.html [L]
+RewriteRule ^proyectos/torre-del-remei/?$ proyecto-torre-del-remei.html [L]
+RewriteRule ^proyectos/palau-blaugrana/?$ proyecto-palau-blaugrana.html [L]
+RewriteRule ^proyectos/gimnas-metropolitan-iradier/?$ proyecto-gimnas-metropolitan-iradier.html [L]
+RewriteRule ^proyectos/aribau-35/?$ proyecto-aribau-35.html [L]
+RewriteRule ^proyectos/castelldefels/?$ proyecto-castelldefels.html [L]
+RewriteRule ^proyectos/abacus-orquinaona/?$ proyecto-abacus-orquinaona.html [L]
+RewriteRule ^proyectos/terraza-gracia/?$ proyecto-terraza-gracia.html [L]
+RewriteRule ^proyectos/terraza-sant-cugat/?$ proyecto-terraza-st-cugat.html [L]
+RewriteRule ^proyectos/terraza-sant-just/?$ proyecto-terraza-st-just.html [L]
+RewriteRule ^proyectos/terraza-badalona/?$ proyecto-terraza-badalona.html [L]
+RewriteRule ^proyectos/terraza-bonanova/?$ proyecto-terraza-bonanova.html [L]
+RewriteRule ^proyectos/terraza-costa-brava/?$ proyecto-terraza-costa-brava.html [L]
+RewriteRule ^blog/lijar-parquet-barcelona/?$ blog-lijar-parquet-barcelona.html [L]
+RewriteRule ^blog/restaurar-parquet-barcelona/?$ blog-antes-despues-parquet-barcelona.html [L]
+RewriteRule ^blog/barniz-o-aceite-parquet/?$ blog-diferencias-barniz-aceite-parquet.html [L]
+RewriteRule ^blog/errores-instalar-parquet/?$ blog-errores-al-instalar-parquet-barcelona.html [L]
+RewriteRule ^blog/mantenimiento-parquet/?$ blog-mantenimiento-parquet-dia-a-dia.html [L]
+RewriteRule ^blog/parquet-nuevo-o-restaurar-eixample/?$ blog-parquet-nuevo-o-restaurar-eixample.html [L]
+RewriteRule ^blog/parquet-suelo-radiante/?$ blog-parquet-suelo-radiante-barcelona.html [L]
+RewriteRule ^blog/tarima-exterior-castelldefels-sitges/?$ blog-tarima-exterior-castelldefels-sitges.html [L]
+RewriteRule ^blog/tonos-parquet/?$ blog-tonos-parquet-moda-barcelona.html [L]
+RewriteRule ^servicios/?$ razolparquet-servicios.html [L]
+RewriteRule ^proyectos/?$ razolparquet-proyectos.html [L]
+RewriteRule ^como-trabajamos/?$ razolparquet-proceso.html [L]
+RewriteRule ^blog/?$ razolparquet-blog.html [L]
+RewriteRule ^contacto/?$ razolparquet-contacto.html [L]
+RewriteRule ^showroom/?$ razolparquet-showroom.html [L]
+RewriteRule ^tarima-exterior-barcelona/?$ tarima-exterior-barcelona.html [L]
+RewriteRule ^barnizado-parquet-barcelona/?$ barnizado-parquet-barcelona.html [L]
+RewriteRule ^instalacion-parquet-barcelona/?$ instalacion-parquet-barcelona.html [L]
+RewriteRule ^lijar-restaurar-parquet-barcelona/?$ lijar-restaurar-parquet-barcelona.html [L]
+RewriteRule ^aviso-legal/?$ aviso-legal.html [L]
+RewriteRule ^privacidad/?$ privacidad.html [L]
+RewriteRule ^cookies/?$ cookies.html [L]
+RewriteRule ^404/?$ 404.html [L]
+RewriteRule ^$ razolparquet-v2.html [L]
+
+# --- Alias adicionales (mismos HTML que en server.cjs) ---
+RewriteRule ^inicio/?$ razolparquet-v2.html [L]
+RewriteRule ^proceso/?$ razolparquet-proceso.html [L]
+RewriteRule ^tu-proyecto/?$ razolparquet-contacto.html [L]
+
+# Si el host sirve solo estáticos sin Node, las reglas anteriores bastan.

@@ -1,0 +1,19 @@
+# Secretos
+.env
+.env.*
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Claude
+.claude/

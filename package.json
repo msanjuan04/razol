@@ -1,0 +1,28 @@
+{
+  "name": "razol",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node server.cjs",
+    "start": "node server.cjs",
+    "serve": "python3 server.py",
+    "build": "node scripts/prepare-deploy.cjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "overrides": {
+    "braces": ">=3.0.3",
+    "micromatch": ">=4.0.8",
+    "debug": ">=4.3.0",
+    "ms": ">=2.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1"
+  }
+}

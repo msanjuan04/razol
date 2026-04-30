@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página no encontrada — Razolparquet</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --cream:#F5F0E8;--dark:#19150F;--gold:#C8A96E;--gold-light:#D4BA85;--warm-gray:#8C7B6B;
+      --border:rgba(245,240,232,0.07);
+    }
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+    html,body{height:100%;}
+    body{background:var(--dark);color:var(--cream);font-family:'DM Sans',sans-serif;font-weight:300;display:flex;flex-direction:column;min-height:100vh;}
+
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:24px 64px;display:flex;justify-content:space-between;align-items:center;}
+    .logo{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--cream);text-decoration:none;}
+    .logo span{color:var(--gold);}
+
+    main{flex:1;display:flex;align-items:center;justify-content:center;padding:120px 24px 80px;position:relative;overflow:hidden;}
+
+    /* Número grande de fondo */
+    .bg-number{position:absolute;font-family:'Cormorant Garamond',serif;font-size:clamp(200px,30vw,380px);font-weight:300;color:rgba(200,169,110,.05);line-height:1;user-select:none;pointer-events:none;top:50%;left:50%;transform:translate(-50%,-50%);}
+
+    .content{position:relative;z-index:1;text-align:center;max-width:520px;}
+
+    .eyebrow{display:inline-flex;align-items:center;gap:14px;margin-bottom:28px;justify-content:center;}
+    .eyebrow-line{width:32px;height:1px;background:var(--gold);}
+    .eyebrow span{font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);}
+
+    h1{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,6vw,72px);font-weight:300;line-height:1.05;margin-bottom:20px;}
+    h1 em{font-style:italic;color:var(--gold);}
+
+    p{font-size:15px;color:var(--warm-gray);line-height:1.8;margin-bottom:40px;}
+
+    .actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+
+    .btn-gold{display:inline-block;background:var(--gold);color:var(--dark);padding:16px 36px;font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:all .3s;}
+    .btn-gold:hover{background:var(--gold-light);transform:translateY(-2px);}
+
+    .btn-ghost{display:inline-block;border:1px solid var(--border);color:var(--warm-gray);padding:16px 36px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:all .3s;}
+    .btn-ghost:hover{border-color:var(--gold);color:var(--cream);}
+
+    .nav-links-404{display:flex;gap:32px;margin-top:56px;justify-content:center;flex-wrap:wrap;}
+    .nav-links-404 a{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--warm-gray);text-decoration:none;transition:color .2s;}
+    .nav-links-404 a:hover{color:var(--gold);}
+
+    @media(max-width:600px){
+      nav{padding:20px 24px;}
+      .actions{flex-direction:column;align-items:center;}
+      .btn-gold,.btn-ghost{width:100%;text-align:center;}
+    }
+  
+    /* ── HAMBURGUESA ── */
+    .nav-burger{display:none;flex-direction:column;justify-content:center;gap:5px;width:36px;height:36px;background:none;border:none;cursor:pointer;padding:4px;z-index:1001;position:relative;}
+    .nav-burger span{display:block;width:100%;height:1.5px;background:var(--cream);transition:all .3s;}
+    .nav-burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+    .nav-burger.open span:nth-child(2){opacity:0;}
+    .nav-burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+    /* ── MENÚ MÓVIL ── */
+    @media(max-width:768px){
+      nav{background:rgba(25,21,15,0.97)!important;backdrop-filter:blur(12px);padding:18px 20px;}
+      .nav-burger{display:flex;}
+      .nav-burger:focus,.nav-burger:focus-visible{outline:none;box-shadow:none;}
+      .nav-links{display:flex!important;position:fixed;top:0;left:0;right:0;bottom:0;background:#19150F;flex-direction:column;align-items:center;justify-content:center;gap:clamp(20px,4vh,44px);z-index:1000;transform:translateX(100%);transition:transform .35s cubic-bezier(.4,0,.2,1);pointer-events:none;list-style:none;margin:0;padding:80px 40px;}
+      .nav-links.open{transform:translateX(0);pointer-events:auto;}
+      .nav-links li{list-style:none;text-align:center;}
+      .nav-links a{display:block;font-size:clamp(16px,4vw,22px)!important;letter-spacing:.2em;text-transform:uppercase;color:var(--cream)!important;text-decoration:none;opacity:1!important;font-weight:300;padding:8px 0;transition:color .2s;}
+      .nav-links a:hover{color:var(--gold)!important;}
+    }
+  </style>
+  <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="logo"><img src="/assets/logorazol.svg" alt="Razol Parquet" height="52" style="display:block;"></a>
+    <div class="lang-sw">
+    <button class="lang-btn" data-setlang="es">ES</button>
+    <button class="lang-btn" data-setlang="en">EN</button>
+    <button class="lang-btn" data-setlang="ca">CA</button>
+  </div>
+</nav>
+
+  <main>
+    <div class="bg-number">404</div>
+    <div class="content">
+      <div class="eyebrow">
+        <div class="eyebrow-line"></div>
+        <span>Página no encontrada</span>
+        <div class="eyebrow-line"></div>
+      </div>
+      <h1>Esta página<br>no <em>existe</em></h1>
+      <p>La URL que buscas no está disponible o ha cambiado de dirección. Puedes volver al inicio o explorar nuestros proyectos y servicios.</p>
+      <div class="actions">
+        <a href="/" class="btn-gold">Volver al inicio</a>
+        <a href="/contacto" class="btn-ghost">Contactar</a>
+      </div>
+      <nav class="nav-links-404">
+        <a href="/servicios" data-i18n="nav.services">Servicios</a>
+        <a href="/proyectos">Proyectos</a>
+        <a href="/como-trabajamos">Cómo trabajamos</a>
+        <a href="/blog">Blog</a>
+      </nav>
+    </div>
+  </main>
+
+
+  <script>
+  (function(){
+    var burger=document.getElementById('navBurger');
+    var links=document.querySelector('.nav-links');
+    if(!burger||!links)return;
+    burger.addEventListener('click',function(){
+      var open=links.classList.toggle('open');
+      burger.classList.toggle('open',open);
+      burger.setAttribute('aria-expanded',open);
+      document.body.style.overflow=open?'hidden':'';
+    });
+    links.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click',function(){
+        links.classList.remove('open');
+        burger.classList.remove('open');
+        burger.setAttribute('aria-expanded','false');
+        document.body.style.overflow='';
+      });
+    });
+    var nav=document.getElementById('nav');
+    window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>60);});
+  })();
+  </script>
+<script src="cookie-banner.js"></script>
+  <script src="mobile-menu.js"></script>
+  <script src="/translations.js"></script>
+  <script src="/i18n.js"></script>
+</body>
+</html>
