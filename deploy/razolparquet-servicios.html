@@ -374,30 +374,31 @@ footer p{font-size:12px;color:var(--warm-gray);}
   <div class="nav-right">
     <ul class="nav-links">
       <li><a href="/" target="_top" data-i18n="nav.home">Inicio</a></li>
-      <li><a href="/servicios" class="active" target="_top">Servicios</a></li>
-            <li><a href="/proyectos" target="_top">Proyectos</a></li>
+      <li><a href="/servicios" class="active" target="_top" data-i18n="nav.services">Servicios</a></li>
+            <li><a href="/proyectos" target="_top" data-i18n="nav.projects">Proyectos</a></li>
       <li><a href="/como-trabajamos" target="_top" data-i18n="nav.howwework">Cómo trabajamos</a></li>
-      <li><a href="/blog" target="_top">Blog</a></li>
-      <li><a href="/contacto" target="_top">Tu proyecto</a></li>
-      <li><a href="/showroom" target="_top">Contacto</a></li>
+      <li><a href="/blog" target="_top" data-i18n="nav.blog">Blog</a></li>
+      <li><a href="/contacto" target="_top" data-i18n="nav.yourproject">Tu proyecto</a></li>
+      <li><a href="/showroom" target="_top" data-i18n="nav.contact">Contacto</a></li>
     </ul>
     <a href="/showroom" class="nav-contact-square" data-i18n="nav.contact" target="_top">Contacto</a>
-  </div>
-<button class="nav-burger" id="navBurger" aria-label="Abrir menú" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
+  
   <div class="lang-sw">
     <button class="lang-btn" data-setlang="es">ES</button>
     <button class="lang-btn" data-setlang="en">EN</button>
     <button class="lang-btn" data-setlang="ca">CA</button>
   </div>
+  </div>
+<button class="nav-burger" id="navBurger" aria-label="Abrir menú" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <!-- HERO -->
 <section class="page-hero">
-  <div class="eyebrow"><div class="eyebrow-line"></div><span>Todo lo que hacemos</span></div>
-  <h1 class="page-title">Nuestros<br><em>servicios</em></h1>
-  <p class="page-sub">Llevamos más de 25 años trabajando la madera. No hacemos de todo, hacemos esto: suelos de madera, con toda la atención y la precisión que merecen.</p>
+  <div class="eyebrow"><div class="eyebrow-line"></div><span data-i18n="srv.hero_tag">Todo lo que hacemos</span></div>
+  <h1 class="page-title" data-i18n="srv.hero_h1">Nuestros<br><em>servicios</em></h1>
+  <p class="page-sub" data-i18n="srv.hero_sub">Llevamos más de 25 años trabajando la madera. No hacemos de todo, hacemos esto: suelos de madera, con toda la atención y la precisión que merecen.</p>
 </section>
 
 <!-- SERVICIOS DETALLADOS -->
@@ -687,11 +688,11 @@ footer p{font-size:12px;color:var(--warm-gray);}
 <!-- CTA STRIP -->
 <section class="cta-strip">
   <div>
-    <h2>¿Quieres saber cuánto costaría<br><em>en tu caso?</em></h2>
-    <p>Envíanos fotos y te damos una valoración rápida. Sin compromiso.</p>
+    <h2 data-i18n="srv.cta_h2">¿Quieres saber cuánto costaría<br><em>en tu caso?</em></h2>
+    <p data-i18n="srv.cta_sub">Envíanos fotos y te damos una valoración rápida. Sin compromiso.</p>
   </div>
   <div class="cta-btns">
-    <a href="/contacto" class="btn-cream">Solicitar presupuesto</a>
+    <a href="/contacto" class="btn-cream" data-i18n="srv.cta_btn">Solicitar presupuesto</a>
     <a href="https://wa.me/34603014636?text=Hola%2C%20quiero%20enviar%20fotos%20de%20mi%20suelo%20para%20una%20valoraci%C3%B3n%20r%C3%A1pida" target="_blank" class="btn-wa">
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
       Enviar fotos por WhatsApp
@@ -703,7 +704,7 @@ footer p{font-size:12px;color:var(--warm-gray);}
   <a href="/" class="logo" style="font-size:17px;" target="_top"><img src="/assets/logorazol.svg" alt="Razol Parquet" height="52" style="display:block;"></a>
   <p>© 2026 GNERAI · Especialistas en parquet en Barcelona</p>
   <div class="foot-links">
-    <a href="/aviso-legal">Aviso legal</a><a href="/privacidad">Privacidad</a><a href="/cookies">Cookies</a>
+    <a href="/aviso-legal" data-i18n="ui.footer_legal">Aviso legal</a><a href="/privacidad" data-i18n="ui.footer_priv">Privacidad</a><a href="/cookies" data-i18n="ui.footer_cook">Cookies</a>
   </div>
 </footer>
 

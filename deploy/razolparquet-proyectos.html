@@ -273,29 +273,30 @@ footer p{font-size:12px;color:var(--warm-gray);}
   <div class="nav-right">
     <ul class="nav-links">
       <li><a href="/" target="_top" data-i18n="nav.home">Inicio</a></li>
-      <li><a href="/servicios" target="_top">Servicios</a></li>
-            <li><a href="/proyectos" target="_top">Proyectos</a></li>
+      <li><a href="/servicios" target="_top" data-i18n="nav.services">Servicios</a></li>
+            <li><a href="/proyectos" target="_top" data-i18n="nav.projects">Proyectos</a></li>
       <li><a href="/como-trabajamos" target="_top" data-i18n="nav.howwework">Cómo trabajamos</a></li>
-      <li><a href="/blog" target="_top">Blog</a></li>
-      <li><a href="/contacto" target="_top">Tu proyecto</a></li>
-      <li><a href="/showroom" target="_top">Contacto</a></li>
+      <li><a href="/blog" target="_top" data-i18n="nav.blog">Blog</a></li>
+      <li><a href="/contacto" target="_top" data-i18n="nav.yourproject">Tu proyecto</a></li>
+      <li><a href="/showroom" target="_top" data-i18n="nav.contact">Contacto</a></li>
     </ul>
     <a href="/showroom" class="nav-contact-square" data-i18n="nav.contact" target="_top">Contacto</a>
-  </div>
-<button class="nav-burger" id="navBurger" aria-label="Abrir menú" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
+  
   <div class="lang-sw">
     <button class="lang-btn" data-setlang="es">ES</button>
     <button class="lang-btn" data-setlang="en">EN</button>
     <button class="lang-btn" data-setlang="ca">CA</button>
   </div>
+  </div>
+<button class="nav-burger" id="navBurger" aria-label="Abrir menú" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <section class="page-hero">
-  <div class="eyebrow"><div class="eyebrow-line"></div><span>Más de 800 proyectos realizados</span></div>
-  <h1 class="page-title">Nuestros<br><em>trabajos</em></h1>
-  <p class="page-sub">Cada proyecto en esta página es un cliente que confió en nosotros. Te mostramos el resultado, el proceso y los materiales para que puedas hacerte una idea real de lo que hacemos.</p>
+  <div class="eyebrow"><div class="eyebrow-line"></div><span data-i18n="proj.hero_tag">Más de 800 proyectos realizados</span></div>
+  <h1 class="page-title" data-i18n="proj.hero_h1">Nuestros<br><em>trabajos</em></h1>
+  <p class="page-sub" data-i18n="proj.hero_sub">Cada proyecto en esta página es un cliente que confió en nosotros. Te mostramos el resultado, el proceso y los materiales para que puedas hacerte una idea real de lo que hacemos.</p>
 </section>
 
 <!-- STATS -->
@@ -314,10 +315,10 @@ footer p{font-size:12px;color:var(--warm-gray);}
 
 <!-- FILTROS (solo visibles en interior) -->
 <div class="filter-bar" id="filterBar">
-  <button class="filter-btn active" data-cat="all" onclick="filterProj(this,'all')">Todos</button>
-  <button class="filter-btn" data-cat="premium" onclick="filterProj(this,'premium')">Proyectos Premium</button>
-  <button class="filter-btn" data-cat="viviendas" onclick="filterProj(this,'viviendas')">Viviendas</button>
-  <button class="filter-btn" data-cat="contract" onclick="filterProj(this,'contract')">Contract</button>
+  <button class="filter-btn active" data-cat="all" data-i18n="proj.filter_all" onclick="filterProj(this,'all')">Todos</button>
+  <button class="filter-btn" data-cat="premium" data-i18n="proj.filter_prem" onclick="filterProj(this,'premium')">Proyectos Premium</button>
+  <button class="filter-btn" data-cat="viviendas" data-i18n="proj.filter_homes" onclick="filterProj(this,'viviendas')">Viviendas</button>
+  <button class="filter-btn" data-cat="contract" data-i18n="proj.filter_cont" onclick="filterProj(this,'contract')">Contract</button>
 </div>
 
 <!-- PROYECTO DESTACADO (storytelling) -->
@@ -590,7 +591,7 @@ footer p{font-size:12px;color:var(--warm-gray);}
 <footer>
   <a href="/" class="logo" style="font-size:17px;" target="_top"><img src="/assets/logorazol.svg" alt="Razol Parquet" height="52" style="display:block;"></a>
   <p>© 2026 GNERAI · Instalación de parquet en Barcelona</p>
-  <div class="foot-links"><a href="/aviso-legal">Aviso legal</a><a href="/privacidad">Privacidad</a><a href="/cookies">Cookies</a></div>
+  <div class="foot-links"><a href="/aviso-legal" data-i18n="ui.footer_legal">Aviso legal</a><a href="/privacidad" data-i18n="ui.footer_priv">Privacidad</a><a href="/cookies" data-i18n="ui.footer_cook">Cookies</a></div>
 </footer>
 
 <a class="wa" href="https://wa.me/34603014636" target="_blank" aria-label="WhatsApp">

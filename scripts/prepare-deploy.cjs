@@ -62,8 +62,10 @@ function main() {
   const assetCount = copyDir(path.join(ROOT, 'assets'), path.join(OUT, 'assets'));
 
   // ── 3. JS del cliente ────────────────────────────────────────────────────
-  copyFile(path.join(ROOT, 'cookie-banner.js'), path.join(OUT, 'cookie-banner.js'));
-  copyFile(path.join(ROOT, 'mobile-menu.js'),   path.join(OUT, 'mobile-menu.js'));
+  copyFile(path.join(ROOT, 'cookie-banner.js'),  path.join(OUT, 'cookie-banner.js'));
+  copyFile(path.join(ROOT, 'mobile-menu.js'),    path.join(OUT, 'mobile-menu.js'));
+  copyFile(path.join(ROOT, 'translations.js'),   path.join(OUT, 'translations.js'));
+  copyFile(path.join(ROOT, 'i18n.js'),           path.join(OUT, 'i18n.js'));
 
   if (!IS_STATIC) {
     // ── 4. Archivos del servidor Node ──────────────────────────────────────
@@ -96,7 +98,7 @@ function main() {
   console.log(`  · ${htmlFiles.length} archivos HTML`);
   console.log(`  · assets/ (${assetCount} archivos)`);
   console.log('  · robots.txt, sitemap.xml, llms.txt');
-  console.log('  · cookie-banner.js, mobile-menu.js');
+  console.log('  · cookie-banner.js, mobile-menu.js, translations.js, i18n.js');
 
   if (!IS_STATIC) {
     console.log('  · server.cjs, package.json, package-lock.json');

@@ -133,19 +133,20 @@ body{background:var(--dark);color:var(--cream);font-family:'DM Sans',sans-serif;
     <a href="/" class="logo" target="_top"><img src="/assets/logorazol.svg" alt="Razol Parquet" height="52" style="display:block;"></a>
     <ul class="nav-links">
       <li><a href="/" target="_top" data-i18n="nav.home">Inicio</a></li>
-      <li><a href="/servicios" target="_top">Servicios</a></li>
-      <li><a href="/proyectos" target="_top">Proyectos</a></li>
+      <li><a href="/servicios" target="_top" data-i18n="nav.services">Servicios</a></li>
+      <li><a href="/proyectos" target="_top" data-i18n="nav.projects">Proyectos</a></li>
       <li><a href="/como-trabajamos" target="_top" data-i18n="nav.howwework">Cómo trabajamos</a></li>
-      <li><a href="/blog" target="_top">Blog</a></li>
-      <li><a href="/contacto" target="_top">Tu proyecto</a></li>
-      <li><a href="/showroom" target="_top">Contacto</a></li>
+      <li><a href="/blog" target="_top" data-i18n="nav.blog">Blog</a></li>
+      <li><a href="/contacto" target="_top" data-i18n="nav.yourproject">Tu proyecto</a></li>
+      <li><a href="/showroom" target="_top" data-i18n="nav.contact">Contacto</a></li>
     </ul>
-<button class="nav-burger" id="navBurger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
-    <div class="lang-sw">
+
+  <div class="lang-sw">
     <button class="lang-btn" data-setlang="es">ES</button>
     <button class="lang-btn" data-setlang="en">EN</button>
     <button class="lang-btn" data-setlang="ca">CA</button>
   </div>
+  <button class="nav-burger" id="navBurger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
 </nav>
   <a href="/proyectos" class="fixed-back" data-i18n="ui.back_projects"><svg viewBox="0 0 16 16" fill="none" stroke-width="1.8"><path d="M10 3L5 8l5 5"/></svg>Proyectos</a>
 
@@ -159,7 +160,7 @@ body{background:var(--dark);color:var(--cream);font-family:'DM Sans',sans-serif;
     <p class="hero-desc">
       Restauración integral de pavimento de madera existente en edificio histórico, con especial atención a la conservación del material original y la coherencia estética del conjunto.
     </p>
-    <a href="/proyectos" class="back-link">← Volver a proyectos</a>
+    <a href="/proyectos" class="back-link" data-i18n="proyecto.footer_back">← Volver a proyectos</a>
   </section>
 
   <main class="layout">
@@ -177,11 +178,11 @@ body{background:var(--dark);color:var(--cream);font-family:'DM Sans',sans-serif;
 
       <div class="specs">
         <div>
-          <div class="spec-label">Tipo</div>
+          <div class="spec-label" data-i18n="proyecto.spec_type">Tipo</div>
           <div class="spec-value">Hotel · Edificio histórico</div>
         </div>
         <div>
-          <div class="spec-label">Ubicación</div>
+          <div class="spec-label" data-i18n="proyecto.spec_location">Ubicación</div>
           <div class="spec-value">Cerdanya</div>
         </div>
         <div>
@@ -211,10 +212,10 @@ body{background:var(--dark);color:var(--cream);font-family:'DM Sans',sans-serif;
 
   <section class="cta-strip">
     <div>
-      <h2>¿Restauración<br><em>en edificio histórico?</em></h2>
-      <p>Valoramos el estado del pavimento, el uso del espacio y definimos lijado, correcciones y sistema de acabado para un resultado homogéneo y duradero.</p>
+      <h2 data-i18n="proyecto.cta_h2">¿Restauración<br><em>en edificio histórico?</em></h2>
+      <p data-i18n="proyecto.cta_sub">Valoramos el estado del pavimento, el uso del espacio y definimos lijado, correcciones y sistema de acabado para un resultado homogéneo y duradero.</p>
     </div>
-    <a href="/contacto" class="btn-cream">Hablar sobre mi proyecto</a>
+    <a href="/contacto" class="btn-cream" data-i18n="proyecto.cta_btn">Hablar sobre mi proyecto</a>
   </section>
 
   <footer>

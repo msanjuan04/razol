@@ -201,10 +201,11 @@ function buildAdminEmail(data, score) {
   <div style="background:${BRAND.dark};padding:24px 36px 0;">
     <p style="margin:0 0 16px;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:${BRAND.gold};font-family:'Arial',sans-serif;">Detalles del proyecto</p>
     <table width="100%" cellpadding="0" cellspacing="0">
-      ${fila('Servicio', data.servicio)}
-      ${fila('Metros',   data.metros)}
-      ${data.plazo ? fila('Plazo', data.plazo) : ''}
-      ${fila('Mensaje',  data.mensaje)}
+      ${fila('Servicio',    data.servicio)}
+      ${fila('Metros',      data.metros)}
+      ${data.plazo       ? fila('Plazo',       data.plazo)       : ''}
+      ${data.presupuesto ? fila('Presupuesto', data.presupuesto) : ''}
+      ${fila('Mensaje',     data.mensaje)}
     </table>
   </div>
 
@@ -438,18 +439,46 @@ const server = http.createServer(async (req, res) => {
         const data  = JSON.parse(body);
         const score = calcularEmbudo(data);
 
-        await Promise.all([
-          guardarEnSupabase(data, score),
-          enviarEmails(data, score),
-        ]);
+        // LOG DE SEGURIDAD — siempre queda en consola (PM2 lo captura)
+        console.log('─'.repeat(60));
+        console.log(`  📋 LEAD ${score.emoji} ${score.calificacion} (${score.total}/14 pts)`);
+        console.log(`     Nombre:     ${data.nombre}`);
+        console.log(`     Teléfono:   ${data.telefono}`);
+        console.log(`     Email:      ${data.email || '—'}`);
+        console.log(`     Zona:       ${data.zona}`);
+        console.log(`     Servicio:   ${data.servicio}`);
+        console.log(`     Metros:     ${data.metros}`);
+        console.log(`     Plazo:      ${data.plazo || '—'}`);
+        console.log(`     Presupuesto:${data.presupuesto || '—'}`);
+        console.log(`     Perfil:     ${data.tipo_perfil || '—'}`);
+        console.log(`     Mensaje:    ${data.mensaje || '—'}`);
+        console.log('─'.repeat(60));
 
-        console.log(`  ✓ Lead guardado — ${score.emoji} ${score.calificacion} (${score.total}/14) — ${data.nombre}`);
+        // 1. Guardar en Supabase — no bloqueante, logueamos si falla
+        guardarEnSupabase(data, score)
+          .then(() => console.log('  ✓ Supabase: lead guardado'))
+          .catch((sbErr) => {
+            const cause = sbErr.cause ? ` (${sbErr.cause.code || sbErr.cause.message})` : '';
+            console.error(`  ⚠ Supabase no disponible${cause}:`, sbErr.message);
+          });
+
+        // 2. Enviar emails — no bloqueante
+        enviarEmails(data, score)
+          .then(() => console.log('  ✓ Emails enviados'))
+          .catch((emailErr) => {
+            const cause = emailErr.cause ? ` (${emailErr.cause.code || emailErr.cause.message})` : '';
+            console.error(`  ⚠ Emails no enviados${cause}:`, emailErr.message);
+          });
+
+        // Siempre devolvemos 200 — el lead queda en los logs aunque fallen los servicios
         res.writeHead(200);
         res.end(JSON.stringify({ ok: true, calificacion: score.calificacion, puntuacion: score.total }));
+
       } catch (err) {
-        console.error('  ✗ Error en /api/submit:', err.message);
-        res.writeHead(500);
-        res.end(JSON.stringify({ ok: false, error: err.message }));
+        // Solo llega aquí si el JSON del formulario es inválido
+        console.error('  ✗ Error parseando formulario:', err.message);
+        res.writeHead(400);
+        res.end(JSON.stringify({ ok: false, error: 'Datos del formulario inválidos' }));
       }
     });
     return;

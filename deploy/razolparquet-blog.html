@@ -230,29 +230,30 @@ footer p{font-size:12px;color:var(--warm-gray);}
   <div class="nav-right">
     <ul class="nav-links">
       <li><a href="/" target="_top" data-i18n="nav.home">Inicio</a></li>
-      <li><a href="/servicios" target="_top">Servicios</a></li>
-            <li><a href="/proyectos" target="_top">Proyectos</a></li>
+      <li><a href="/servicios" target="_top" data-i18n="nav.services">Servicios</a></li>
+            <li><a href="/proyectos" target="_top" data-i18n="nav.projects">Proyectos</a></li>
       <li><a href="/como-trabajamos" target="_top" data-i18n="nav.howwework">Cómo trabajamos</a></li>
-      <li><a href="/blog" class="active" target="_top">Blog</a></li>
-      <li><a href="/contacto" target="_top">Tu proyecto</a></li>
-      <li><a href="/showroom" target="_top">Contacto</a></li>
+      <li><a href="/blog" class="active" target="_top" data-i18n="nav.blog">Blog</a></li>
+      <li><a href="/contacto" target="_top" data-i18n="nav.yourproject">Tu proyecto</a></li>
+      <li><a href="/showroom" target="_top" data-i18n="nav.contact">Contacto</a></li>
     </ul>
     <a href="/showroom" class="nav-contact-square" data-i18n="nav.contact" target="_top">Contacto</a>
-  </div>
-<button class="nav-burger" id="navBurger" aria-label="Abrir menú" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
+  
   <div class="lang-sw">
     <button class="lang-btn" data-setlang="es">ES</button>
     <button class="lang-btn" data-setlang="en">EN</button>
     <button class="lang-btn" data-setlang="ca">CA</button>
   </div>
+  </div>
+<button class="nav-burger" id="navBurger" aria-label="Abrir menú" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <section class="page-hero">
-  <div class="eyebrow"><div class="eyebrow-line"></div><span>Ideas, guías y consejos expertos</span></div>
-  <h1 class="page-title">Blog de<br><em>parquet</em></h1>
-  <p class="page-sub">Publicamos contenido útil para ayudarte a elegir, mantener y disfrutar tu suelo de madera durante años. Sin tecnicismos innecesarios y con recomendaciones reales de obra.</p>
+  <div class="eyebrow"><div class="eyebrow-line"></div><span data-i18n="blog.hero_tag">Ideas, guías y consejos expertos</span></div>
+  <h1 class="page-title" data-i18n="blog.hero_h1">Blog de<br><em>parquet</em></h1>
+  <p class="page-sub" data-i18n="blog.hero_sub">Publicamos contenido útil para ayudarte a elegir, mantener y disfrutar tu suelo de madera durante años. Sin tecnicismos innecesarios y con recomendaciones reales de obra.</p>
 </section>
 
 <section class="post-grid" id="postGrid">
@@ -362,7 +363,7 @@ footer p{font-size:12px;color:var(--warm-gray);}
 <footer>
   <a href="/" class="logo" style="font-size:17px;" target="_top"><img src="/assets/logorazol.svg" alt="Razol Parquet" height="52" style="display:block;"></a>
   <p>© 2026 GNERAI · Instalación de parquet en Barcelona</p>
-  <div class="foot-links"><a href="/aviso-legal">Aviso legal</a><a href="/privacidad">Privacidad</a><a href="/cookies">Cookies</a></div>
+  <div class="foot-links"><a href="/aviso-legal" data-i18n="ui.footer_legal">Aviso legal</a><a href="/privacidad" data-i18n="ui.footer_priv">Privacidad</a><a href="/cookies" data-i18n="ui.footer_cook">Cookies</a></div>
 </footer>
 
 <a class="wa" href="https://wa.me/34603014636" target="_blank" aria-label="WhatsApp">

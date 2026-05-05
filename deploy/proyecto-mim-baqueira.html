@@ -129,20 +129,21 @@
     <div class="nav-right">
       <ul class="nav-links">
         <li><a href="/" target="_top" data-i18n="nav.home">Inicio</a></li>
-        <li><a href="/servicios" target="_top">Servicios</a></li>
-        <li><a href="/proyectos" target="_top" class="active">Proyectos</a></li>
+        <li><a href="/servicios" target="_top" data-i18n="nav.services">Servicios</a></li>
+        <li><a href="/proyectos" target="_top" class="active" data-i18n="nav.projects">Proyectos</a></li>
         <li><a href="/como-trabajamos" target="_top" data-i18n="nav.howwework">Cómo trabajamos</a></li>
-        <li><a href="/blog" target="_top">Blog</a></li>
-        <li><a href="/contacto" target="_top">Tu proyecto</a></li>
+        <li><a href="/blog" target="_top" data-i18n="nav.blog">Blog</a></li>
+        <li><a href="/contacto" target="_top" data-i18n="nav.yourproject">Tu proyecto</a></li>
       </ul>
       <a href="/showroom" class="nav-contact-square" data-i18n="nav.contact" target="_top">Contacto</a>
-    </div>
-    <button class="nav-burger" id="navBurger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
-    <div class="lang-sw">
+    
+  <div class="lang-sw">
     <button class="lang-btn" data-setlang="es">ES</button>
     <button class="lang-btn" data-setlang="en">EN</button>
     <button class="lang-btn" data-setlang="ca">CA</button>
   </div>
+  </div>
+    <button class="nav-burger" id="navBurger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
 </nav>
   <a href="/proyectos" class="fixed-back" data-i18n="ui.back_projects"><svg viewBox="0 0 16 16" fill="none" stroke-width="1.8"><path d="M10 3L5 8l5 5"/></svg>Proyectos</a>
 
@@ -156,7 +157,7 @@
     <p class="hero-desc">
       Un espacio donde la madera no solo reviste, sino que define la experiencia.
     </p>
-    <a href="/proyectos" class="back-link">← Volver a proyectos</a>
+    <a href="/proyectos" class="back-link" data-i18n="proyecto.footer_back">← Volver a proyectos</a>
   </section>
 
   <main class="layout">
@@ -174,19 +175,19 @@
 
       <div class="specs">
         <div>
-          <div class="spec-label">Tipo</div>
+          <div class="spec-label" data-i18n="proyecto.spec_type">Tipo</div>
           <div class="spec-value">Hotel · Contract</div>
         </div>
         <div>
-          <div class="spec-label">Ubicación</div>
+          <div class="spec-label" data-i18n="proyecto.spec_location">Ubicación</div>
           <div class="spec-value">Valle de Arán</div>
         </div>
         <div>
-          <div class="spec-label">Sistema</div>
+          <div class="spec-label" data-i18n="proyecto.spec_system">Sistema</div>
           <div class="spec-value">Encolado</div>
         </div>
         <div>
-          <div class="spec-label">Acabado</div>
+          <div class="spec-label" data-i18n="proyecto.spec_finish">Acabado</div>
           <div class="spec-value">Rústico</div>
         </div>
       </div>
@@ -202,10 +203,10 @@
 
   <section class="cta-strip">
     <div>
-      <h2>¿Un espacio<br><em>de alto nivel?</em></h2>
-      <p>Cuéntanos tu proyecto hotelero o residencial y definimos contigo formato, acabado y una ejecución a la altura del diseño.</p>
+      <h2 data-i18n="proyecto.cta_h2">¿Un espacio<br><em>de alto nivel?</em></h2>
+      <p data-i18n="proyecto.cta_sub">Cuéntanos tu proyecto hotelero o residencial y definimos contigo formato, acabado y una ejecución a la altura del diseño.</p>
     </div>
-    <a href="/contacto" class="btn-cream">Hablar sobre mi proyecto</a>
+    <a href="/contacto" class="btn-cream" data-i18n="proyecto.cta_btn">Hablar sobre mi proyecto</a>
   </section>
 
   <footer>

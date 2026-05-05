@@ -8,29 +8,25 @@
   var STORAGE_KEY = 'razol-lang';
   var LANGS = ['es', 'en', 'ca'];
 
-  var FLAGS = {
-    es: '🇪🇸',
-    en: '🇬🇧',
-    ca: '<svg viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg" style="width:20px;height:14px;display:block;flex-shrink:0"><rect width="20" height="14" fill="#FCDD09"/><rect y="1.56" width="20" height="1.56" fill="#C1001A"/><rect y="4.67" width="20" height="1.56" fill="#C1001A"/><rect y="7.78" width="20" height="1.56" fill="#C1001A"/><rect y="10.89" width="20" height="1.56" fill="#C1001A"/></svg>'
-  };
-
   var LABELS = { es: 'ES', en: 'EN', ca: 'CA' };
+
+  var GLOBE_ICON = '<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="7.5" r="6.5" stroke="currentColor" stroke-width="1.2"/><ellipse cx="7.5" cy="7.5" rx="2.8" ry="6.5" stroke="currentColor" stroke-width="1.2"/><line x1="1" y1="5.5" x2="14" y2="5.5" stroke="currentColor" stroke-width="1.2"/><line x1="1" y1="9.5" x2="14" y2="9.5" stroke="currentColor" stroke-width="1.2"/></svg>';
 
   /* ── CSS del selector de idioma ── */
   var css = `
 .lang-sw{position:relative;margin-left:12px;}
-.lang-toggle{background:none;border:none;cursor:pointer;display:flex;align-items:center;gap:5px;padding:5px 7px;border-radius:4px;color:rgba(245,240,232,.65);transition:background .2s,color .2s;}
+.lang-toggle{background:none;border:none;cursor:pointer;display:flex;align-items:center;gap:5px;padding:5px 7px;border-radius:4px;color:rgba(245,240,232,.6);transition:background .2s,color .2s;}
 .lang-toggle:hover{background:rgba(200,169,110,.1);color:var(--cream,#F5F0E8);}
-.lang-flag-current{font-size:20px;line-height:1;display:flex;align-items:center;}
+.lang-toggle-globe{display:flex;align-items:center;flex-shrink:0;}
+.lang-toggle-code{font-family:'DM Sans',sans-serif;font-size:10.5px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;line-height:1;}
 .lang-caret{transition:transform .2s;flex-shrink:0;}
 .lang-sw.open .lang-caret{transform:rotate(180deg);}
-.lang-dropdown{position:absolute;right:0;top:calc(100% + 6px);background:rgba(25,21,15,.97);backdrop-filter:blur(16px);border:1px solid rgba(200,169,110,.2);display:none;flex-direction:column;min-width:88px;z-index:9100;box-shadow:0 8px 24px rgba(0,0,0,.5);overflow:hidden;}
+.lang-dropdown{position:absolute;right:0;top:calc(100% + 6px);background:rgba(25,21,15,.97);backdrop-filter:blur(16px);border:1px solid rgba(200,169,110,.2);display:none;flex-direction:column;min-width:72px;z-index:9100;box-shadow:0 8px 24px rgba(0,0,0,.5);overflow:hidden;}
 .lang-sw.open .lang-dropdown{display:flex;}
-.lang-btn{background:none;border:none;cursor:pointer;display:flex;align-items:center;gap:8px;padding:10px 14px;font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,240,232,.5);transition:color .2s,background .2s;white-space:nowrap;width:100%;text-align:left;}
+.lang-btn{background:none;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:10px 14px;font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(245,240,232,.45);transition:color .2s,background .2s;white-space:nowrap;width:100%;}
 .lang-btn:hover{color:var(--cream,#F5F0E8);background:rgba(200,169,110,.08);}
 .lang-btn.lact{color:var(--gold,#C8A96E);}
-.lang-btn .lang-flag{font-size:16px;line-height:1;display:flex;align-items:center;}
-@media(max-width:768px){.lang-sw{margin-left:0;}.lang-dropdown{right:auto;left:0;}.lang-toggle{padding:6px 8px;}.lang-flag-current{font-size:22px;}}
+@media(max-width:768px){.lang-sw{margin-left:0;}.lang-dropdown{right:auto;left:0;}.lang-toggle{padding:6px 8px;}}
 `;
 
   var styleEl = document.createElement('style');
@@ -89,22 +85,27 @@
 
     _buildDropdowns: function () {
       document.querySelectorAll('.lang-sw').forEach(function (sw) {
-        /* Botón toggle con bandera actual */
+        /* Botón toggle: globo + código de idioma activo */
         var toggle = document.createElement('button');
         toggle.className = 'lang-toggle';
         toggle.setAttribute('aria-label', 'Seleccionar idioma');
         toggle.setAttribute('aria-haspopup', 'true');
         toggle.setAttribute('aria-expanded', 'false');
 
-        var flagCurrent = document.createElement('span');
-        flagCurrent.className = 'lang-flag-current';
+        var globeSpan = document.createElement('span');
+        globeSpan.className = 'lang-toggle-globe';
+        globeSpan.innerHTML = GLOBE_ICON;
+
+        var codeSpan = document.createElement('span');
+        codeSpan.className = 'lang-toggle-code';
 
         var caretSvg = '<svg class="lang-caret" width="8" height="5" viewBox="0 0 8 5" fill="none"><path d="M1 1l3 3 3-3" stroke="rgba(245,240,232,.6)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
-        toggle.appendChild(flagCurrent);
+        toggle.appendChild(globeSpan);
+        toggle.appendChild(codeSpan);
         toggle.insertAdjacentHTML('beforeend', caretSvg);
 
-        /* Dropdown con las 3 opciones */
+        /* Dropdown con las 3 opciones solo texto */
         var dropdown = document.createElement('div');
         dropdown.className = 'lang-dropdown';
         dropdown.setAttribute('role', 'listbox');
@@ -114,16 +115,7 @@
           btn.className = 'lang-btn';
           btn.dataset.setlang = lang;
           btn.setAttribute('role', 'option');
-
-          var flagEl = document.createElement('span');
-          flagEl.className = 'lang-flag';
-          flagEl.innerHTML = FLAGS[lang];
-
-          var labelEl = document.createElement('span');
-          labelEl.textContent = LABELS[lang];
-
-          btn.appendChild(flagEl);
-          btn.appendChild(labelEl);
+          btn.textContent = LABELS[lang];
           dropdown.appendChild(btn);
         });
 
@@ -182,8 +174,8 @@
       document.querySelectorAll('[data-setlang]').forEach(function (btn) {
         btn.classList.toggle('lact', btn.dataset.setlang === cur);
       });
-      document.querySelectorAll('.lang-flag-current').forEach(function (el) {
-        el.innerHTML = FLAGS[cur];
+      document.querySelectorAll('.lang-toggle-code').forEach(function (el) {
+        el.textContent = LABELS[cur];
       });
     }
   };
